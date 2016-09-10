@@ -55,15 +55,57 @@ static NSString * const kNTEContentFieldName = @"kNTEContent";
     //For now we'll do this.
     //Next step is to do some regex on it first.
     NSError *error;
-    NSString *markdownAsHTML = [MMMarkdown HTMLStringWithMarkdown:markdown extensions:MMMarkdownExtensionsGitHubFlavored error:&error];
+    NSDictionary *replacementsDictionary = [self removeMathematicalFormattingFromMarkdown:markdown];
+    NSString *cleanedUpMarkDown = replacementsDictionary[@"markdown"];
+    NSDictionary *replacements = replacementsDictionary[@"replacements"];
+    NSString *markdownAsHTML = [MMMarkdown HTMLStringWithMarkdown:cleanedUpMarkDown
+                                                       extensions:MMMarkdownExtensionsGitHubFlavored
+                                                            error:&error];
+    
     if(error) {
         NSLog(@"error = %@", error);
         return nil;
         //Show some alert.
     }
-    return [self embedHTMLContentInTemplate:markdownAsHTML];
+    NSString *inHTML = [self embedHTMLContentInTemplate:markdownAsHTML];
+    return [self addMathematicalFormattingToMarkdown:inHTML withDictionary:replacements];
 }
+
+- (NSString *)addMathematicalFormattingToMarkdown : (NSString *)markdown withDictionary : (NSDictionary *)replacements {
+    for (NSString *key in replacements) {
+        markdown = [markdown stringByReplacingOccurrencesOfString:key withString:replacements[key]];
+    }
+    return markdown;
+}
+
+- (NSDictionary *)removeMathematicalFormattingFromMarkdown : (NSString *)markdown {
+    NSMutableString *mutableMarkdown = [[NSMutableString alloc]initWithString:markdown];
+    NSError *error;
+    NSRegularExpression *regularRegex = [NSRegularExpression regularExpressionWithPattern:@"\\$\\$([\\s\\S]*?)\\$\\$" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray *instances = [regularRegex matchesInString:markdown
+                                               options:NSMatchingReportProgress
+                                                 range:NSMakeRange(0, markdown.length)];
     
+    NSMutableDictionary *replacements = [NSMutableDictionary dictionaryWithCapacity:instances.count];
+    
+    int rangeOffset = 0;
+    
+    for (int i =0; i<instances.count; i++) {
+        NSTextCheckingResult *match = instances[i];
+        NSString *replacement = [NSString stringWithFormat:@"<div class=\"notebook-replacement\" id=replacement-%i></div>", i];
+        NSString *originalString = [markdown substringWithRange:match.range];
+        replacements[replacement] = originalString;
+        NSRange offsetRange = NSMakeRange(match.range.location-rangeOffset, match.range.length);
+        rangeOffset += (originalString.length - replacement.length);
+        [mutableMarkdown replaceCharactersInRange:offsetRange withString:replacement];
+    }
+    
+    
+    NSDictionary *returnDict = @{@"replacements" : replacements,
+                                 @"markdown" : mutableMarkdown};
+    return returnDict;
+}
+
 - (NSString *)embedHTMLContentInTemplate : (NSString *)content {
     NSDictionary *parameters = @{kNTEContentFieldName : content};
     NSError *error;

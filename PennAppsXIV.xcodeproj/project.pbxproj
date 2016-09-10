@@ -17,6 +17,8 @@
 		BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019A1D84979100FC27AF /* AppDelegate.m */; };
 		BED301A31D84979100FC27AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED301A21D84979100FC27AF /* Assets.xcassets */; };
 		BED301A61D84979100FC27AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED301A41D84979100FC27AF /* LaunchScreen.storyboard */; };
+		BED426AC1D84BC1F0092C711 /* Andrew.md in Sources */ = {isa = PBXBuildFile; fileRef = BED426AB1D84BC1F0092C711 /* Andrew.md */; };
+		BED426AD1D84BDD20092C711 /* Andrew.md in Resources */ = {isa = PBXBuildFile; fileRef = BED426AB1D84BC1F0092C711 /* Andrew.md */; };
 		CCA82B43D63C674FD53D5AF6 /* Pods_PennAppsXIV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,7 @@
 		BED301A21D84979100FC27AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED301A51D84979100FC27AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED301A71D84979100FC27AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED426AB1D84BC1F0092C711 /* Andrew.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Andrew.md; sourceTree = "<group>"; };
 		D7BB5CCB5EDBFD3E53CDEA6C /* Pods-PennAppsXIV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennAppsXIV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +152,7 @@
 		BED301961D84979100FC27AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BED426AB1D84BC1F0092C711 /* Andrew.md */,
 				BE27A8ED1D84A59F0094D1F2 /* html_template.mustache */,
 				BED301971D84979100FC27AF /* main.m */,
 			);
@@ -218,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED426AD1D84BDD20092C711 /* Andrew.md in Resources */,
 				BED301A61D84979100FC27AF /* LaunchScreen.storyboard in Resources */,
 				BE27A8EE1D84A59F0094D1F2 /* html_template.mustache in Resources */,
 				BED301A31D84979100FC27AF /* Assets.xcassets in Resources */,
@@ -280,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE27A8E81D84A0540094D1F2 /* AutolayoutHelper.m in Sources */,
+				BED426AC1D84BC1F0092C711 /* Andrew.md in Sources */,
 				BE27A8DC1D849BE50094D1F2 /* NTEDisplayViewController.m in Sources */,
 				BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */,
 				BE27A8E01D849C990094D1F2 /* NTEMarkdownRenderController.m in Sources */,

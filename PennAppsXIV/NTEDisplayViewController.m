@@ -38,7 +38,13 @@
     }
     //Temporary
     NTENote *note = [[NTENote alloc]init];
-    note.rawMarkdown = @"# test";
+    NSString *txtFilePath = [[NSBundle mainBundle] pathForResource:@"Andrew" ofType:@"md"];
+    NSError *error;
+    NSString *rawMarkDown = [NSString stringWithContentsOfFile:txtFilePath encoding:NSUTF8StringEncoding error:&error];
+    if(error) {
+        NSLog(@"error.localized description = %@", error.localizedDescription);
+    }
+    note.rawMarkdown = rawMarkDown;
     
     note.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:note.rawMarkdown];
     
