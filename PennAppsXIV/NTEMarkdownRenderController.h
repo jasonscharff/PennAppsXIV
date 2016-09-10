@@ -10,6 +10,7 @@
 
 @interface NTEMarkdownRenderController : NSObject
 
-+ (NSString *)generateHTMLFromMarkdown : (NSString *)markdown;
++ (instancetype)sharedRenderController;
+- (NSString *)generateHTMLFromMarkdown : (NSString *)markdown;
     
 @end

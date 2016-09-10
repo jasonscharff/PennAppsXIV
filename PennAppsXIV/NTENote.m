@@ -22,7 +22,7 @@
     
 - (void)setupWithDictionary : (NSDictionary *)dictionary {
     self.rawMarkdown = dictionary[@"markdown"];
-    self.html = [NTEMarkdownRenderController generateHTMLFromMarkdown:self.rawMarkdown];
+    self.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:self.rawMarkdown];
 }
     
 @end

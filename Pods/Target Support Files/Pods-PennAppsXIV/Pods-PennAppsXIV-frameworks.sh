@@ -85,12 +85,14 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GRMustache/GRMustache.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HTMLReader/HTMLReader.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JRSwizzle/JRSwizzle.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MMMarkdown/MMMarkdown.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GRMustache/GRMustache.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/HTMLReader/HTMLReader.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JRSwizzle/JRSwizzle.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MMMarkdown/MMMarkdown.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"

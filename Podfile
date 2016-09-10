@@ -6,6 +6,7 @@ target 'PennAppsXIV' do
   
   pod 'GRMustache'
   pod 'MMMarkdown'
+  pod 'HTMLReader'
   
   use_frameworks!
    

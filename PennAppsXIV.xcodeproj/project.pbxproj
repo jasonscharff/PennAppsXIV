@@ -12,6 +12,7 @@
 		BE27A8E41D849E230094D1F2 /* NTENote.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8E31D849E230094D1F2 /* NTENote.m */; };
 		BE27A8E81D84A0540094D1F2 /* AutolayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8E71D84A0540094D1F2 /* AutolayoutHelper.m */; };
 		BE27A8EB1D84A0590094D1F2 /* LinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8EA1D84A0590094D1F2 /* LinearLayout.m */; };
+		BE27A8EE1D84A59F0094D1F2 /* html_template.mustache in Resources */ = {isa = PBXBuildFile; fileRef = BE27A8ED1D84A59F0094D1F2 /* html_template.mustache */; };
 		BED301981D84979100FC27AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED301971D84979100FC27AF /* main.m */; };
 		BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019A1D84979100FC27AF /* AppDelegate.m */; };
 		BED301A31D84979100FC27AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED301A21D84979100FC27AF /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		BE27A8E71D84A0540094D1F2 /* AutolayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutHelper.m; sourceTree = "<group>"; };
 		BE27A8E91D84A0590094D1F2 /* LinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearLayout.h; sourceTree = "<group>"; };
 		BE27A8EA1D84A0590094D1F2 /* LinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearLayout.m; sourceTree = "<group>"; };
+		BE27A8ED1D84A59F0094D1F2 /* html_template.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = html_template.mustache; sourceTree = "<group>"; };
 		BED301931D84979100FC27AF /* PennAppsXIV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennAppsXIV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED301971D84979100FC27AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED301991D84979100FC27AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		BED301961D84979100FC27AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BE27A8ED1D84A59F0094D1F2 /* html_template.mustache */,
 				BED301971D84979100FC27AF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED301A61D84979100FC27AF /* LaunchScreen.storyboard in Resources */,
+				BE27A8EE1D84A59F0094D1F2 /* html_template.mustache in Resources */,
 				BED301A31D84979100FC27AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

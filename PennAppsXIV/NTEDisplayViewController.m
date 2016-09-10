@@ -39,7 +39,8 @@
     //Temporary
     NTENote *note = [[NTENote alloc]init];
     note.rawMarkdown = @"# test";
-    note.html = [NTEMarkdownRenderController generateHTMLFromMarkdown:note.rawMarkdown];
+    
+    note.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:note.rawMarkdown];
     
     self.note = note;
     
@@ -57,7 +58,10 @@
     if(self.viewLoaded) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDir = [paths objectAtIndex:0];
-        [self.webView loadHTMLString:note.html baseURL:nil];
+        if(note.html) {
+            [self.webView loadHTMLString:note.html baseURL:nil];
+        }
+        
     }
 }
 

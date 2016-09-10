@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HTMLReader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JRSwizzle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>01918ECE9EC28D4D3B8CFDB30A70B244</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>15051665D795DBEC4AAF3E0B01433469</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E790C0E25EBD4F2D4AE02652E1CF6E3</key>
+		<key>35AB4E645558A256E1C06F38C71F4836</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFBFCA4F096AB0D3379693A2F9D69D7C</key>
+		<key>79F17913398056148DF882688559E5BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
