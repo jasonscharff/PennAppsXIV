@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE27A8DC1D849BE50094D1F2 /* NTEDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */; };
 		BED301981D84979100FC27AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED301971D84979100FC27AF /* main.m */; };
 		BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019A1D84979100FC27AF /* AppDelegate.m */; };
-		BED3019E1D84979100FC27AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019D1D84979100FC27AF /* ViewController.m */; };
-		BED301A11D84979100FC27AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED3019F1D84979100FC27AF /* Main.storyboard */; };
 		BED301A31D84979100FC27AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED301A21D84979100FC27AF /* Assets.xcassets */; };
 		BED301A61D84979100FC27AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED301A41D84979100FC27AF /* LaunchScreen.storyboard */; };
 		CCA82B43D63C674FD53D5AF6 /* Pods_PennAppsXIV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */; };
@@ -19,13 +18,12 @@
 /* Begin PBXFileReference section */
 		4CC8C478C017BC0CC9D90D62 /* Pods-PennAppsXIV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennAppsXIV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.debug.xcconfig"; sourceTree = "<group>"; };
 		6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PennAppsXIV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE27A8DA1D849BE50094D1F2 /* NTEDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEDisplayViewController.h; sourceTree = "<group>"; };
+		BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEDisplayViewController.m; sourceTree = "<group>"; };
 		BED301931D84979100FC27AF /* PennAppsXIV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennAppsXIV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED301971D84979100FC27AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED301991D84979100FC27AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BED3019A1D84979100FC27AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BED3019C1D84979100FC27AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BED3019D1D84979100FC27AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BED301A01D84979100FC27AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BED301A21D84979100FC27AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED301A51D84979100FC27AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED301A71D84979100FC27AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +59,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE27A8DD1D849BEB0094D1F2 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE27A8DA1D849BE50094D1F2 /* NTEDisplayViewController.h */,
+				BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
 		BED3018A1D84979100FC27AF = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +91,7 @@
 			children = (
 				BED301991D84979100FC27AF /* AppDelegate.h */,
 				BED3019A1D84979100FC27AF /* AppDelegate.m */,
-				BED3019C1D84979100FC27AF /* ViewController.h */,
-				BED3019D1D84979100FC27AF /* ViewController.m */,
-				BED3019F1D84979100FC27AF /* Main.storyboard */,
+				BE27A8DD1D849BEB0094D1F2 /* View Controller */,
 				BED301A21D84979100FC27AF /* Assets.xcassets */,
 				BED301A41D84979100FC27AF /* LaunchScreen.storyboard */,
 				BED301A71D84979100FC27AF /* Info.plist */,
@@ -168,7 +173,6 @@
 			files = (
 				BED301A61D84979100FC27AF /* LaunchScreen.storyboard in Resources */,
 				BED301A31D84979100FC27AF /* Assets.xcassets in Resources */,
-				BED301A11D84979100FC27AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED3019E1D84979100FC27AF /* ViewController.m in Sources */,
+				BE27A8DC1D849BE50094D1F2 /* NTEDisplayViewController.m in Sources */,
 				BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */,
 				BED301981D84979100FC27AF /* main.m in Sources */,
 			);
@@ -236,14 +240,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BED3019F1D84979100FC27AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BED301A01D84979100FC27AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BED301A41D84979100FC27AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

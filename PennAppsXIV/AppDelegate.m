@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "NTEDisplayViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NTEDisplayViewController *rootVC = [[NTEDisplayViewController alloc]init];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

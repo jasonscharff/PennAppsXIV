@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NTEDisplayViewController.h
 //  PennAppsXIV
 //
 //  Created by Jason Scharff on 9/10/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NTEDisplayViewController : UIViewController
 
 @end
-
