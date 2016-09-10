@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class NTENote;
+
 @interface NTEDisplayViewController : UIViewController
 
+@property (nonatomic) NTENote *note;
+    
+    
 @end

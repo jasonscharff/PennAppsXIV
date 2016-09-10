@@ -8,6 +8,8 @@
 
 #import "NTENote.h"
 
+#import "NTEMarkdownRenderController.h"
+
 @implementation NTENote
     
 - (instancetype)initWithDictonary : (NSDictionary *)dictionary {
@@ -19,7 +21,8 @@
 }
     
 - (void)setupWithDictionary : (NSDictionary *)dictionary {
-    
+    self.rawMarkdown = dictionary[@"markdown"];
+    self.html = [NTEMarkdownRenderController generateHTMLFromMarkdown:self.rawMarkdown];
 }
     
 @end

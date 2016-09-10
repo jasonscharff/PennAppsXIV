@@ -10,6 +10,8 @@
 		BE27A8DC1D849BE50094D1F2 /* NTEDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */; };
 		BE27A8E01D849C990094D1F2 /* NTEMarkdownRenderController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8DF1D849C990094D1F2 /* NTEMarkdownRenderController.m */; };
 		BE27A8E41D849E230094D1F2 /* NTENote.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8E31D849E230094D1F2 /* NTENote.m */; };
+		BE27A8E81D84A0540094D1F2 /* AutolayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8E71D84A0540094D1F2 /* AutolayoutHelper.m */; };
+		BE27A8EB1D84A0590094D1F2 /* LinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8EA1D84A0590094D1F2 /* LinearLayout.m */; };
 		BED301981D84979100FC27AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED301971D84979100FC27AF /* main.m */; };
 		BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019A1D84979100FC27AF /* AppDelegate.m */; };
 		BED301A31D84979100FC27AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED301A21D84979100FC27AF /* Assets.xcassets */; };
@@ -26,6 +28,10 @@
 		BE27A8DF1D849C990094D1F2 /* NTEMarkdownRenderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEMarkdownRenderController.m; sourceTree = "<group>"; };
 		BE27A8E21D849E230094D1F2 /* NTENote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTENote.h; sourceTree = "<group>"; };
 		BE27A8E31D849E230094D1F2 /* NTENote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTENote.m; sourceTree = "<group>"; };
+		BE27A8E61D84A0540094D1F2 /* AutolayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutHelper.h; sourceTree = "<group>"; };
+		BE27A8E71D84A0540094D1F2 /* AutolayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutHelper.m; sourceTree = "<group>"; };
+		BE27A8E91D84A0590094D1F2 /* LinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearLayout.h; sourceTree = "<group>"; };
+		BE27A8EA1D84A0590094D1F2 /* LinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearLayout.m; sourceTree = "<group>"; };
 		BED301931D84979100FC27AF /* PennAppsXIV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennAppsXIV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED301971D84979100FC27AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED301991D84979100FC27AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,7 +76,6 @@
 			children = (
 				BE27A8DA1D849BE50094D1F2 /* NTEDisplayViewController.h */,
 				BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */,
-				BE27A8E11D849CA40094D1F2 /* Data Handler */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -91,6 +96,17 @@
 				BE27A8E31D849E230094D1F2 /* NTENote.m */,
 			);
 			name = "Model Objects";
+			sourceTree = "<group>";
+		};
+		BE27A8EC1D84A05D0094D1F2 /* AutolayoutHelper */ = {
+			isa = PBXGroup;
+			children = (
+				BE27A8E61D84A0540094D1F2 /* AutolayoutHelper.h */,
+				BE27A8E71D84A0540094D1F2 /* AutolayoutHelper.m */,
+				BE27A8E91D84A0590094D1F2 /* LinearLayout.h */,
+				BE27A8EA1D84A0590094D1F2 /* LinearLayout.m */,
+			);
+			name = AutolayoutHelper;
 			sourceTree = "<group>";
 		};
 		BED3018A1D84979100FC27AF = {
@@ -116,10 +132,12 @@
 			children = (
 				BED301991D84979100FC27AF /* AppDelegate.h */,
 				BED3019A1D84979100FC27AF /* AppDelegate.m */,
+				BE27A8EC1D84A05D0094D1F2 /* AutolayoutHelper */,
+				BE27A8E11D849CA40094D1F2 /* Data Handler */,
 				BE27A8E51D849E260094D1F2 /* Model Objects */,
 				BE27A8DD1D849BEB0094D1F2 /* View Controller */,
-				BED301A21D84979100FC27AF /* Assets.xcassets */,
 				BED301A41D84979100FC27AF /* LaunchScreen.storyboard */,
+				BED301A21D84979100FC27AF /* Assets.xcassets */,
 				BED301A71D84979100FC27AF /* Info.plist */,
 				BED301961D84979100FC27AF /* Supporting Files */,
 			);
@@ -257,11 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE27A8E81D84A0540094D1F2 /* AutolayoutHelper.m in Sources */,
 				BE27A8DC1D849BE50094D1F2 /* NTEDisplayViewController.m in Sources */,
 				BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */,
 				BE27A8E01D849C990094D1F2 /* NTEMarkdownRenderController.m in Sources */,
 				BE27A8E41D849E230094D1F2 /* NTENote.m in Sources */,
 				BED301981D84979100FC27AF /* main.m in Sources */,
+				BE27A8EB1D84A0590094D1F2 /* LinearLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

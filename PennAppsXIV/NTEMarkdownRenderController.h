@@ -10,4 +10,6 @@
 
 @interface NTEMarkdownRenderController : NSObject
 
++ (NSString *)generateHTMLFromMarkdown : (NSString *)markdown;
+    
 @end

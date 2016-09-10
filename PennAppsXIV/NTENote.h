@@ -14,7 +14,5 @@
 
 @property (nonatomic) NSString *rawMarkdown;
 @property (nonatomic) NSString *html;
-@property (nonatomic) NSDictionary <NSString *, UIImage *>*images;
-    
     
 @end
