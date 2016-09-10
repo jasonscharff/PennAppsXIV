@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE27A8DC1D849BE50094D1F2 /* NTEDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */; };
+		BE27A8E01D849C990094D1F2 /* NTEMarkdownRenderController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27A8DF1D849C990094D1F2 /* NTEMarkdownRenderController.m */; };
 		BED301981D84979100FC27AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED301971D84979100FC27AF /* main.m */; };
 		BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019A1D84979100FC27AF /* AppDelegate.m */; };
 		BED301A31D84979100FC27AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED301A21D84979100FC27AF /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PennAppsXIV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE27A8DA1D849BE50094D1F2 /* NTEDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEDisplayViewController.h; sourceTree = "<group>"; };
 		BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEDisplayViewController.m; sourceTree = "<group>"; };
+		BE27A8DE1D849C990094D1F2 /* NTEMarkdownRenderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEMarkdownRenderController.h; sourceTree = "<group>"; };
+		BE27A8DF1D849C990094D1F2 /* NTEMarkdownRenderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEMarkdownRenderController.m; sourceTree = "<group>"; };
 		BED301931D84979100FC27AF /* PennAppsXIV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennAppsXIV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED301971D84979100FC27AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED301991D84979100FC27AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,8 +67,18 @@
 			children = (
 				BE27A8DA1D849BE50094D1F2 /* NTEDisplayViewController.h */,
 				BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */,
+				BE27A8E11D849CA40094D1F2 /* Data Handler */,
 			);
 			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		BE27A8E11D849CA40094D1F2 /* Data Handler */ = {
+			isa = PBXGroup;
+			children = (
+				BE27A8DE1D849C990094D1F2 /* NTEMarkdownRenderController.h */,
+				BE27A8DF1D849C990094D1F2 /* NTEMarkdownRenderController.m */,
+			);
+			name = "Data Handler";
 			sourceTree = "<group>";
 		};
 		BED3018A1D84979100FC27AF = {
@@ -233,6 +246,7 @@
 			files = (
 				BE27A8DC1D849BE50094D1F2 /* NTEDisplayViewController.m in Sources */,
 				BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */,
+				BE27A8E01D849C990094D1F2 /* NTEMarkdownRenderController.m in Sources */,
 				BED301981D84979100FC27AF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
