@@ -1,0 +1,6 @@
+framework module Pods_PennAppsXIV {
+  umbrella header "Pods-PennAppsXIV-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0F47DB72F4E441BA71079BC608EB4E25"
-               BuildableName = "Pods_PennAppsXIV.framework"
-               BlueprintName = "Pods-PennAppsXIV"
+               BlueprintIdentifier = "B3210A66B8BD865B15C87A951E58B478"
+               BuildableName = "SocketIO.framework"
+               BlueprintName = "Socket.IO-Client-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0F47DB72F4E441BA71079BC608EB4E25"
-            BuildableName = "Pods_PennAppsXIV.framework"
-            BlueprintName = "Pods-PennAppsXIV"
+            BlueprintIdentifier = "B3210A66B8BD865B15C87A951E58B478"
+            BuildableName = "SocketIO.framework"
+            BlueprintName = "Socket.IO-Client-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

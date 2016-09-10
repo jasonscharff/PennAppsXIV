@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14FC69F9D2D3817EE356A824 /* libPods-PennAppsXIV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F01C0ED2324B2D233B837273 /* libPods-PennAppsXIV.a */; };
 		BED301981D84979100FC27AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED301971D84979100FC27AF /* main.m */; };
 		BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019A1D84979100FC27AF /* AppDelegate.m */; };
 		BED3019E1D84979100FC27AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019D1D84979100FC27AF /* ViewController.m */; };
 		BED301A11D84979100FC27AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED3019F1D84979100FC27AF /* Main.storyboard */; };
 		BED301A31D84979100FC27AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED301A21D84979100FC27AF /* Assets.xcassets */; };
 		BED301A61D84979100FC27AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED301A41D84979100FC27AF /* LaunchScreen.storyboard */; };
+		CCA82B43D63C674FD53D5AF6 /* Pods_PennAppsXIV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CC8C478C017BC0CC9D90D62 /* Pods-PennAppsXIV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennAppsXIV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.debug.xcconfig"; sourceTree = "<group>"; };
+		6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PennAppsXIV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED301931D84979100FC27AF /* PennAppsXIV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennAppsXIV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED301971D84979100FC27AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED301991D84979100FC27AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		BED301A51D84979100FC27AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED301A71D84979100FC27AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7BB5CCB5EDBFD3E53CDEA6C /* Pods-PennAppsXIV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennAppsXIV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.release.xcconfig"; sourceTree = "<group>"; };
-		F01C0ED2324B2D233B837273 /* libPods-PennAppsXIV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PennAppsXIV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FC69F9D2D3817EE356A824 /* libPods-PennAppsXIV.a in Frameworks */,
+				CCA82B43D63C674FD53D5AF6 /* Pods_PennAppsXIV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		61C78496CA0407AE0D57E0EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F01C0ED2324B2D233B837273 /* libPods-PennAppsXIV.a */,
+				6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,6 +138,7 @@
 					BED301921D84979100FC27AF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3R5J785EXT;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -352,6 +353,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonscharff.PennAppsXIV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -365,6 +367,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonscharff.PennAppsXIV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

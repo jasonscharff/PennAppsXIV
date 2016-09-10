@@ -1,12 +1,25 @@
 PODS:
   - MMMarkdown (0.5.5)
+  - Socket.IO-Client-Swift (7.0.3)
 
 DEPENDENCIES:
   - MMMarkdown
+  - Socket.IO-Client-Swift (from `https://github.com/socketio/socket.io-client-swift.git`, branch `development`)
+
+EXTERNAL SOURCES:
+  Socket.IO-Client-Swift:
+    :branch: development
+    :git: https://github.com/socketio/socket.io-client-swift.git
+
+CHECKOUT OPTIONS:
+  Socket.IO-Client-Swift:
+    :commit: 72b65655108e78b233f559bfbed9bf387ee89ca5
+    :git: https://github.com/socketio/socket.io-client-swift.git
 
 SPEC CHECKSUMS:
   MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
+  Socket.IO-Client-Swift: a4d6474309fa82b52736888abe53a75ba33d09a1
 
-PODFILE CHECKSUM: 5346b50a483f833cb73cd4b903c9903d28812117
+PODFILE CHECKSUM: da6ec124966c696b8021f24d94852a01cd33b061
 
 COCOAPODS: 1.0.1

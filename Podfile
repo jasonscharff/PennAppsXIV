@@ -3,10 +3,14 @@
 
 target 'PennAppsXIV' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+  
+  
+  pod 'MMMarkdown'
+  
+  use_frameworks!
+   
+   pod 'Socket.IO-Client-Swift', :git => 'https://github.com/socketio/socket.io-client-swift.git', :branch => 'development'
 
-  # Pods for PennAppsXIV
 
-    pod 'MMMarkdown'
 
 end

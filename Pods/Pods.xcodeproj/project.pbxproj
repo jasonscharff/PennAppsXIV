@@ -7,119 +7,237 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D772DF32655396C9381B8B8B9A287E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		16748FB092AB0FDADE9A5A376CC7C513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		1996B47C7BAF27F9B910C07FD9D96BC6 /* MMHTMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AF4ABA594B3873A3347315D20E1C6F71 /* MMHTMLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D3F62C41C996B4D422BCA7220DE6C32 /* MMMarkdown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 249A520AEE3EC05ED86DC9D4BD6324E0 /* MMMarkdown-dummy.m */; };
-		24E182F8F4421B0A959EA3637986BC13 /* MMElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD622CDE9CA5F3EFED44542940E8819 /* MMElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C6806FD6A0195BFE11BC8B9FA32F079 /* MMGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F95A25E4A1E88EA0C30DC232990E9E1 /* MMGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D6754D703E06F06E26C56A6DFD7344B /* Pods-PennAppsXIV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EA9652D1D8E29052EF7D09FC69DC99 /* Pods-PennAppsXIV-dummy.m */; };
-		3882FBBA2E29B39D1EFDBE6B6CFF1460 /* MMGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = B69FCC97BC5AAD3E39E29C9350836E82 /* MMGenerator.m */; };
-		4A32E817A9E0324D99E2D014EE7A1077 /* MMScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 902E1B2F66B76C32CF60D69D5F0588ED /* MMScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C7A37E07EF02F0BBDBDE669683987C9 /* MMDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E0F5DE4B0D68D539B1021364E361F9C8 /* MMDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65E7EB76497A635B67C08FCB59C06706 /* MMHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6314770657ED798322404671D8F0C7 /* MMHTMLParser.m */; };
-		6953FCF9A68B7ECD3B5F4F83DC4A4B90 /* MMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0EDE5024B2E539D6D4E6AC6592D34E /* MMDocument.m */; };
-		729D58C773B135F31836E9F240968E38 /* MMDocument_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7B6851EEA194F88E35202B9E4F6C0A /* MMDocument_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D7EB438B37174942C0E35A91D6F100D /* MMParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1E5E144A7CA8D0EF1FA042EE261F70 /* MMParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D313F95B9AA7137A0C7471B156C0EF3 /* MMSpanParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A7CE593F1735DAD8D3AF03D183954D /* MMSpanParser.m */; };
-		91C098841210023D13FB451AA4903B32 /* MMElement.m in Sources */ = {isa = PBXBuildFile; fileRef = DE56C7D83FF29C4DFB624183F5242156 /* MMElement.m */; };
-		93F880C24A7037EC95F2D86229DED4C1 /* MMMarkdown.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F5AEC1741AD789B5D0B61415F7601C /* MMMarkdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FE608F66E9F1FB064725922EA5C56C5 /* MMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 217F3560E1BB1F43F9005B10FBA46BEA /* MMParser.m */; };
-		DA672D62A4684D94CBD7B272ECFE3852 /* MMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6946D6114066EFAD2FA4F33E3A14B9C0 /* MMScanner.m */; };
-		DB16A82DAA13C0A874C708620750D8E4 /* MMMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6620E107B59524C40452EABC2839C7FF /* MMMarkdown.m */; };
-		DF56699030CB0CE372337A1B567B8034 /* MMSpanParser.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE02D3EE70F6316B2FAA7EAA31ADFB7 /* MMSpanParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E053D32A28F5499FC956993308CCA60 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5684259FC17E1D846E594549F0F75B6 /* SocketAckEmitter.swift */; };
+		263400F7298679BE9EE19E6F6E14BEAB /* SocketEnginePollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141207B400F42D68F171DB79F98B01D /* SocketEnginePollable.swift */; };
+		28792D373D27BA53FEF02D3B2FC9C65C /* MMMarkdown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1DDE4F59521FA4D0370081A5E61157 /* MMMarkdown-dummy.m */; };
+		2AD40DF8218A64E5F3570CD56FD5ABD2 /* SocketParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B851CCF663995C6AD0DD472924FA80 /* SocketParsable.swift */; };
+		2F579B335AD8FEEAC20D82405369F2A8 /* MMDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B17A0CCF71F04DFA9E86BC8ACE0E7A /* MMDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A07FBAD4E23015CFF450B31126275FC /* MMHTMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8085559C0944AD110DA8807417282E3E /* MMHTMLParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F20BF586892C8AEC424F1D97067EB39 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C39D98198B846B9E7FF6B66B9C4D57 /* SocketEngineClient.swift */; };
+		48385B1000CCE4681795B2003AB0C55D /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D45780B87C7CEC0BF34462A7D27817 /* SocketIOClientStatus.swift */; };
+		4953074C7B766AC924935E060301122A /* MMSpanParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 76D22615BA09B60D72F0EAD8CD9CC606 /* MMSpanParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C8F828E230E255008624CAFF67D4416 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7B79C48C00C122A1697F747A0BD0 /* SocketStringReader.swift */; };
+		50F625C6CF0A296330AD2DED6B6BAD62 /* MMGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 61EB45DAE2B768F1C2A91C86D9871B7A /* MMGenerator.m */; };
+		5E32303213B75CCA54D1DA6C77BBB7A0 /* MMScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = A98ED21D4DCDC6CAA65386C710B14399 /* MMScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EEB4E268388AA41133F5BA4E6985387 /* MMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1184588139CFD6DCBD2DC0C1893D4F6D /* MMDocument.m */; };
+		5F6EC5F55A5D77E64498AF725365D72A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		6387DA3C9BECCE0D725E30C2DAB61A71 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097E7AEE0E9745474734518C7188A219 /* SocketEngineSpec.swift */; };
+		6485A2F3217C8205818FAA0B2E01D59B /* MMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E49F84BFD3563534CCDA33A08C52BF /* MMParser.m */; };
+		64B1FD0ED8492CC2E6D9A370D5C79F72 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D0A83E31459F014D4DAD343B57193 /* SocketAckManager.swift */; };
+		6D0DCC2F3D631D040B207AF277AA4168 /* Socket.IO-Client-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 613A293AD4C73275E709D8213932C0E9 /* Socket.IO-Client-Swift-dummy.m */; };
+		7E23D11009E14EC9641702420728D58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		824700988984FA152C24B39C55D9D1D2 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEEF0CFD18ADF046D1468BFB36F003C /* SSLSecurity.swift */; };
+		834848B3B5E7F06756B5319B472614B0 /* Socket.IO-Client-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4289B249F80D4F0CF72F4342E1617C2 /* Socket.IO-Client-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87DA80E0C84213F4B17515828E7AF2C4 /* Pods-PennAppsXIV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4202F80DAAD8A5B8040988F41C23E04C /* Pods-PennAppsXIV-dummy.m */; };
+		890C62A82030A844B70C0CC49BAF9A76 /* SocketExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5539471E7B5157375CE54B406BF73E /* SocketExtensions.swift */; };
+		898F35C3A2DC01496E69B5FAD86CAC09 /* MMSpanParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E12048D69E6B6EF90A5BB5FF184B0E8 /* MMSpanParser.m */; };
+		8B7D00F1F78C2D3F9A24099D1453E2F6 /* MMMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C43CE221FE41FE94487AAAF819B776 /* MMMarkdown.m */; };
+		995BB5F8C249EDD249F1F7252EE19612 /* SocketIOClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0787175F3EAFF4E2908B396304A37 /* SocketIOClientSpec.swift */; };
+		9B0AF9BF528E68A348BB9186778966A4 /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7EB4ED32D47C642840C2B0A196004 /* SocketEngine.swift */; };
+		9E3CAED8F035C1236A0F9AF1B3573723 /* MMGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = F91B6601D71636CB680B825557BCE2C5 /* MMGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A536282788E1371ECF368371B0E97F9B /* MMElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 7282B01D773D8E47D7A888986C3A9EB4 /* MMElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A59560C97272E6B403AADB6883D561A3 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B332CC7B3B0EC5EFDDD5797D953E71C /* SocketAnyEvent.swift */; };
+		A9F2246AAFCA1C22E42DBA2C64677080 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0DBF1CA93D9C8FD6F6AB6F1067AC8 /* SocketPacket.swift */; };
+		AB9B4A872DF045611113B7718B19A41A /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A8F2430A32E1269015F420123DCAD /* WebSocket.swift */; };
+		AC8C289E1C4F7A5C2BDCA99B1C2311E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B28A60D95E3BEC6A81FD5C04B429024D /* SocketIOClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18722A4B741456B8EEF85FE1161F9A0 /* SocketIOClientConfiguration.swift */; };
+		B600BF7A9820F7FC41EE2DA41C6267F4 /* MMMarkdown.h in Headers */ = {isa = PBXBuildFile; fileRef = 9355EAFC1F7081C09CC0124BE7A52A51 /* MMMarkdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32CB5126B2F2E18C6D9392FD25EDD0E /* SocketClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B562A118CECB8AAFEF780AD3970CB6 /* SocketClientManager.swift */; };
+		C98A3588900E70AEB1E01777581A2011 /* SocketEngineWebsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B2436D0CF259979AEFE408B65032A /* SocketEngineWebsocket.swift */; };
+		CB57BB891774D54404BF9462A0AA350F /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE488278315FE581390954F0A18391 /* SocketTypes.swift */; };
+		D2F1CD89F0E80A5639D68962AC2E9865 /* MMParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C2B92709D636950AAFCE5992CC320F4 /* MMParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3617577FDB641AB4F9951723DEA9381 /* MMElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6832FA039036A7D1B49511F04AE26A9E /* MMElement.m */; };
+		D6B175BCBBA0C642A3C1482903237A0F /* MMDocument_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DC09E127B3CEEB569CA619B08863D164 /* MMDocument_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8472F161F97D10686CFF86E27D00C22 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886C7DC7360B76C774C44FBA9C496820 /* SocketIOClient.swift */; };
+		DB123C55C1E90FDF2D265D6EFBBC2473 /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5733787BCE298FC9950651DDCE6BC99C /* SocketIOClientOption.swift */; };
+		E026AD504E7AE2C7D9FBD07EADF5B360 /* MMMarkdown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67F7B2237B6A3580479FB5BE1BBFAE3C /* MMMarkdown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1F6CFDC0875F18432A4EF62C09C9F05 /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F337FBA19519853425F5CF161DEF839 /* SocketEnginePacketType.swift */; };
+		EBF34E4A8FDF0349B4C0FA8B31CF4E9C /* MMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 811367BE719C5D5A0CF3CE7088E5CB8F /* MMScanner.m */; };
+		ECB8EFB806E8C363D449DF1647A78300 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CC6CF58B80E478DF34D04069291749 /* SocketEventHandler.swift */; };
+		F48EC5613185F3AA3CD5748093A6EC3C /* MMHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DC4B6314781CBF385EABF2C532EAA /* MMHTMLParser.m */; };
+		F4C9A83F58870A32CCCBAA84A4398164 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17B802B2A6A2E0A67F774EA8DD0F001 /* SocketLogger.swift */; };
+		FC8B2F0103B299982B823D6324AC2AD0 /* Pods-PennAppsXIV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FA47A7F6368E8F5A168FF2933714540 /* Pods-PennAppsXIV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C0B3ECD4FADCAFF3878FBC60B1DD55E6 /* PBXContainerItemProxy */ = {
+		2F721CC6E1AA67AC527D449EB80FA9F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F0C7F9FBF3A825957E5748F71026206C;
+			remoteGlobalIDString = 3EBB97988EA73CAED65A10806B0BB121;
 			remoteInfo = MMMarkdown;
+		};
+		7AB711EF0FD92D2462E760D30CD9C762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3210A66B8BD865B15C87A951E58B478;
+			remoteInfo = "Socket.IO-Client-Swift";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		217F3560E1BB1F43F9005B10FBA46BEA /* MMParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMParser.m; path = Source/MMParser.m; sourceTree = "<group>"; };
-		249A520AEE3EC05ED86DC9D4BD6324E0 /* MMMarkdown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMMarkdown-dummy.m"; sourceTree = "<group>"; };
-		34A7CE593F1735DAD8D3AF03D183954D /* MMSpanParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMSpanParser.m; path = Source/MMSpanParser.m; sourceTree = "<group>"; };
-		36EA9652D1D8E29052EF7D09FC69DC99 /* Pods-PennAppsXIV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PennAppsXIV-dummy.m"; sourceTree = "<group>"; };
-		37CA1AE8EA72923900035856EA1CB460 /* MMMarkdown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMMarkdown.xcconfig; sourceTree = "<group>"; };
-		3B6314770657ED798322404671D8F0C7 /* MMHTMLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMHTMLParser.m; path = Source/MMHTMLParser.m; sourceTree = "<group>"; };
-		3F95A25E4A1E88EA0C30DC232990E9E1 /* MMGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMGenerator.h; path = Source/MMGenerator.h; sourceTree = "<group>"; };
-		41F5AEC1741AD789B5D0B61415F7601C /* MMMarkdown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMMarkdown.h; path = Source/MMMarkdown.h; sourceTree = "<group>"; };
-		4CD622CDE9CA5F3EFED44542940E8819 /* MMElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMElement.h; path = Source/MMElement.h; sourceTree = "<group>"; };
-		501C9531493AF3EBC6F21EA80F471B6B /* Pods-PennAppsXIV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PennAppsXIV-acknowledgements.plist"; sourceTree = "<group>"; };
-		6620E107B59524C40452EABC2839C7FF /* MMMarkdown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMMarkdown.m; path = Source/MMMarkdown.m; sourceTree = "<group>"; };
-		6946D6114066EFAD2FA4F33E3A14B9C0 /* MMScanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMScanner.m; path = Source/MMScanner.m; sourceTree = "<group>"; };
-		71D5CA4D3DBB06CC65363132B1DB0954 /* Pods-PennAppsXIV-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PennAppsXIV-resources.sh"; sourceTree = "<group>"; };
-		7DEA9264A86151C7D474D892144139AF /* Pods-PennAppsXIV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PennAppsXIV-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8B0655DC9D12DB4A5A8106DFC7EE6106 /* Pods-PennAppsXIV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PennAppsXIV.debug.xcconfig"; sourceTree = "<group>"; };
-		8D1E5E144A7CA8D0EF1FA042EE261F70 /* MMParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMParser.h; path = Source/MMParser.h; sourceTree = "<group>"; };
-		902E1B2F66B76C32CF60D69D5F0588ED /* MMScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMScanner.h; path = Source/MMScanner.h; sourceTree = "<group>"; };
+		06D45780B87C7CEC0BF34462A7D27817 /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientStatus.swift; path = Source/SocketIOClientStatus.swift; sourceTree = "<group>"; };
+		097E7AEE0E9745474734518C7188A219 /* SocketEngineSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineSpec.swift; path = Source/SocketEngineSpec.swift; sourceTree = "<group>"; };
+		0AFB3C67F0BC5624DDCED6D40F4ADCDC /* Pods-PennAppsXIV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PennAppsXIV.release.xcconfig"; sourceTree = "<group>"; };
+		1184588139CFD6DCBD2DC0C1893D4F6D /* MMDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDocument.m; path = Source/MMDocument.m; sourceTree = "<group>"; };
+		1B332CC7B3B0EC5EFDDD5797D953E71C /* SocketAnyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAnyEvent.swift; path = Source/SocketAnyEvent.swift; sourceTree = "<group>"; };
+		1C5539471E7B5157375CE54B406BF73E /* SocketExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketExtensions.swift; path = Source/SocketExtensions.swift; sourceTree = "<group>"; };
+		1E725B5C9CE71CA1CFA6F687B6D31C1D /* Pods-PennAppsXIV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PennAppsXIV-frameworks.sh"; sourceTree = "<group>"; };
+		273F7B79C48C00C122A1697F747A0BD0 /* SocketStringReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketStringReader.swift; path = Source/SocketStringReader.swift; sourceTree = "<group>"; };
+		2D9DC4B6314781CBF385EABF2C532EAA /* MMHTMLParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMHTMLParser.m; path = Source/MMHTMLParser.m; sourceTree = "<group>"; };
+		2F1DDE4F59521FA4D0370081A5E61157 /* MMMarkdown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMMarkdown-dummy.m"; sourceTree = "<group>"; };
+		344B2436D0CF259979AEFE408B65032A /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineWebsocket.swift; path = Source/SocketEngineWebsocket.swift; sourceTree = "<group>"; };
+		37CC6CF58B80E478DF34D04069291749 /* SocketEventHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEventHandler.swift; path = Source/SocketEventHandler.swift; sourceTree = "<group>"; };
+		3CFE488278315FE581390954F0A18391 /* SocketTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketTypes.swift; path = Source/SocketTypes.swift; sourceTree = "<group>"; };
+		3E12048D69E6B6EF90A5BB5FF184B0E8 /* MMSpanParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMSpanParser.m; path = Source/MMSpanParser.m; sourceTree = "<group>"; };
+		3F337FBA19519853425F5CF161DEF839 /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePacketType.swift; path = Source/SocketEnginePacketType.swift; sourceTree = "<group>"; };
+		4202F80DAAD8A5B8040988F41C23E04C /* Pods-PennAppsXIV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PennAppsXIV-dummy.m"; sourceTree = "<group>"; };
+		4348AC409D30BF83F6227FE6E5B0A3CD /* Pods-PennAppsXIV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PennAppsXIV-acknowledgements.plist"; sourceTree = "<group>"; };
+		472DBDD3731BC338B262A39304E0746B /* Socket.IO-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Socket.IO-Client-Swift.modulemap"; sourceTree = "<group>"; };
+		5065724BDA7E72555DB7D5D7775914C3 /* Pods_PennAppsXIV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PennAppsXIV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5733787BCE298FC9950651DDCE6BC99C /* SocketIOClientOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientOption.swift; path = Source/SocketIOClientOption.swift; sourceTree = "<group>"; };
+		5CFE7FD34F2A43014F5466EC812CE21B /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		613A293AD4C73275E709D8213932C0E9 /* Socket.IO-Client-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Socket.IO-Client-Swift-dummy.m"; sourceTree = "<group>"; };
+		61EB45DAE2B768F1C2A91C86D9871B7A /* MMGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMGenerator.m; path = Source/MMGenerator.m; sourceTree = "<group>"; };
+		67F7B2237B6A3580479FB5BE1BBFAE3C /* MMMarkdown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMMarkdown-umbrella.h"; sourceTree = "<group>"; };
+		6832FA039036A7D1B49511F04AE26A9E /* MMElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMElement.m; path = Source/MMElement.m; sourceTree = "<group>"; };
+		6BD0787175F3EAFF4E2908B396304A37 /* SocketIOClientSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientSpec.swift; path = Source/SocketIOClientSpec.swift; sourceTree = "<group>"; };
+		6F8A8F2430A32E1269015F420123DCAD /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Source/WebSocket.swift; sourceTree = "<group>"; };
+		6FA47A7F6368E8F5A168FF2933714540 /* Pods-PennAppsXIV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PennAppsXIV-umbrella.h"; sourceTree = "<group>"; };
+		7282B01D773D8E47D7A888986C3A9EB4 /* MMElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMElement.h; path = Source/MMElement.h; sourceTree = "<group>"; };
+		73791FA2436EF99B82C3F6F34662EA34 /* Pods-PennAppsXIV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PennAppsXIV.debug.xcconfig"; sourceTree = "<group>"; };
+		76D22615BA09B60D72F0EAD8CD9CC606 /* MMSpanParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMSpanParser.h; path = Source/MMSpanParser.h; sourceTree = "<group>"; };
+		7C2B92709D636950AAFCE5992CC320F4 /* MMParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMParser.h; path = Source/MMParser.h; sourceTree = "<group>"; };
+		8085559C0944AD110DA8807417282E3E /* MMHTMLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMHTMLParser.h; path = Source/MMHTMLParser.h; sourceTree = "<group>"; };
+		811367BE719C5D5A0CF3CE7088E5CB8F /* MMScanner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMScanner.m; path = Source/MMScanner.m; sourceTree = "<group>"; };
+		886C7DC7360B76C774C44FBA9C496820 /* SocketIOClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = Source/SocketIOClient.swift; sourceTree = "<group>"; };
+		8C749CC9EE9BA6A61514FBAA6A6CD901 /* MMMarkdown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MMMarkdown.modulemap; sourceTree = "<group>"; };
+		9355EAFC1F7081C09CC0124BE7A52A51 /* MMMarkdown.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMMarkdown.h; path = Source/MMMarkdown.h; sourceTree = "<group>"; };
+		9361C46B6268B5673D91F8802FA33655 /* Pods-PennAppsXIV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PennAppsXIV-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ABE02D3EE70F6316B2FAA7EAA31ADFB7 /* MMSpanParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMSpanParser.h; path = Source/MMSpanParser.h; sourceTree = "<group>"; };
-		AF4ABA594B3873A3347315D20E1C6F71 /* MMHTMLParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMHTMLParser.h; path = Source/MMHTMLParser.h; sourceTree = "<group>"; };
-		B69FCC97BC5AAD3E39E29C9350836E82 /* MMGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMGenerator.m; path = Source/MMGenerator.m; sourceTree = "<group>"; };
-		BA21F7E1C7F457FFDD8400DC45904768 /* MMMarkdown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMMarkdown-prefix.pch"; sourceTree = "<group>"; };
-		BC6A40897AB7CA0E013B821CE358E5D3 /* Pods-PennAppsXIV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PennAppsXIV.release.xcconfig"; sourceTree = "<group>"; };
-		C861B0C6856AFF7CD413413DFDF0AA1B /* libMMMarkdown.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMMarkdown.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		96863279A00DDD7CDB070566213DC1AA /* MMMarkdown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMMarkdown.xcconfig; sourceTree = "<group>"; };
+		97B562A118CECB8AAFEF780AD3970CB6 /* SocketClientManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketClientManager.swift; path = Source/SocketClientManager.swift; sourceTree = "<group>"; };
+		9BD0DBF1CA93D9C8FD6F6AB6F1067AC8 /* SocketPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = Source/SocketPacket.swift; sourceTree = "<group>"; };
+		9FDF24C4694D50B553EDF744EA4CC932 /* Pods-PennAppsXIV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PennAppsXIV.modulemap"; sourceTree = "<group>"; };
+		9FF643CAB136E167733A8A9C45A0E727 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98ED21D4DCDC6CAA65386C710B14399 /* MMScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMScanner.h; path = Source/MMScanner.h; sourceTree = "<group>"; };
+		ACEEF0CFD18ADF046D1468BFB36F003C /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SSLSecurity.swift; sourceTree = "<group>"; };
+		B18722A4B741456B8EEF85FE1161F9A0 /* SocketIOClientConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientConfiguration.swift; path = Source/SocketIOClientConfiguration.swift; sourceTree = "<group>"; };
+		B6C39D98198B846B9E7FF6B66B9C4D57 /* SocketEngineClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineClient.swift; path = Source/SocketEngineClient.swift; sourceTree = "<group>"; };
+		BB2D0A83E31459F014D4DAD343B57193 /* SocketAckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckManager.swift; path = Source/SocketAckManager.swift; sourceTree = "<group>"; };
+		BD0CAFBAA7524C4700B6690409F8DD67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF20699DCE1634CD9CD2B437FED8BFF1 /* Socket.IO-Client-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Socket.IO-Client-Swift.xcconfig"; sourceTree = "<group>"; };
+		C141207B400F42D68F171DB79F98B01D /* SocketEnginePollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePollable.swift; path = Source/SocketEnginePollable.swift; sourceTree = "<group>"; };
+		C2BB312CF79B8A910E9041A22493A568 /* Socket.IO-Client-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-prefix.pch"; sourceTree = "<group>"; };
+		C4E49F84BFD3563534CCDA33A08C52BF /* MMParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMParser.m; path = Source/MMParser.m; sourceTree = "<group>"; };
+		C53C7837FBAA4E3D1BCC520E34A15865 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5684259FC17E1D846E594549F0F75B6 /* SocketAckEmitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = Source/SocketAckEmitter.swift; sourceTree = "<group>"; };
+		C5A42A2D3F6D9D3A2C82ED51A0F7B0D3 /* MMMarkdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MMMarkdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C43CE221FE41FE94487AAAF819B776 /* MMMarkdown.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMMarkdown.m; path = Source/MMMarkdown.m; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D2B049F6EDEE1EE756DA2E42D3F3CDD4 /* libPods-PennAppsXIV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PennAppsXIV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE56C7D83FF29C4DFB624183F5242156 /* MMElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMElement.m; path = Source/MMElement.m; sourceTree = "<group>"; };
-		DF7B6851EEA194F88E35202B9E4F6C0A /* MMDocument_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDocument_Private.h; path = Source/MMDocument_Private.h; sourceTree = "<group>"; };
-		E0F5DE4B0D68D539B1021364E361F9C8 /* MMDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDocument.h; path = Source/MMDocument.h; sourceTree = "<group>"; };
-		EB0EDE5024B2E539D6D4E6AC6592D34E /* MMDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDocument.m; path = Source/MMDocument.m; sourceTree = "<group>"; };
-		EF58D163EAD2C6ADC92134D7041DE934 /* Pods-PennAppsXIV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PennAppsXIV-frameworks.sh"; sourceTree = "<group>"; };
+		D4289B249F80D4F0CF72F4342E1617C2 /* Socket.IO-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
+		DC09E127B3CEEB569CA619B08863D164 /* MMDocument_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDocument_Private.h; path = Source/MMDocument_Private.h; sourceTree = "<group>"; };
+		DF6D04D5AC3347057B29DEE82FD4FFF6 /* Pods-PennAppsXIV-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PennAppsXIV-resources.sh"; sourceTree = "<group>"; };
+		E17B802B2A6A2E0A67F774EA8DD0F001 /* SocketLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketLogger.swift; path = Source/SocketLogger.swift; sourceTree = "<group>"; };
+		E69BCE16737F2618B0D616BC7CFA2019 /* MMMarkdown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMMarkdown-prefix.pch"; sourceTree = "<group>"; };
+		E8B851CCF663995C6AD0DD472924FA80 /* SocketParsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketParsable.swift; path = Source/SocketParsable.swift; sourceTree = "<group>"; };
+		F8B17A0CCF71F04DFA9E86BC8ACE0E7A /* MMDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDocument.h; path = Source/MMDocument.h; sourceTree = "<group>"; };
+		F91B6601D71636CB680B825557BCE2C5 /* MMGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMGenerator.h; path = Source/MMGenerator.h; sourceTree = "<group>"; };
+		FDC7EB4ED32D47C642840C2B0A196004 /* SocketEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngine.swift; path = Source/SocketEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F351BCC9231E469317370BCC53B4D31C /* Frameworks */ = {
+		15A0AC7BFC7EF29ECD583004B6C83709 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D772DF32655396C9381B8B8B9A287E1 /* Foundation.framework in Frameworks */,
+				7E23D11009E14EC9641702420728D58A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6D80A8832D9F84C078881CEF4958962 /* Frameworks */ = {
+		9623E9EE3A90CE345BEF3E7C8899FF40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16748FB092AB0FDADE9A5A376CC7C513 /* Foundation.framework in Frameworks */,
+				5F6EC5F55A5D77E64498AF725365D72A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA14A631D049F8E6729C2153030CB19B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC8C289E1C4F7A5C2BDCA99B1C2311E4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E06BB082451123C2F2C62C1F0890D33 /* Support Files */ = {
+		03CBCDB87CFDDB1FE4B492C4EBA15C97 /* Socket.IO-Client-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				37CA1AE8EA72923900035856EA1CB460 /* MMMarkdown.xcconfig */,
-				249A520AEE3EC05ED86DC9D4BD6324E0 /* MMMarkdown-dummy.m */,
-				BA21F7E1C7F457FFDD8400DC45904768 /* MMMarkdown-prefix.pch */,
+				C5684259FC17E1D846E594549F0F75B6 /* SocketAckEmitter.swift */,
+				BB2D0A83E31459F014D4DAD343B57193 /* SocketAckManager.swift */,
+				1B332CC7B3B0EC5EFDDD5797D953E71C /* SocketAnyEvent.swift */,
+				97B562A118CECB8AAFEF780AD3970CB6 /* SocketClientManager.swift */,
+				FDC7EB4ED32D47C642840C2B0A196004 /* SocketEngine.swift */,
+				B6C39D98198B846B9E7FF6B66B9C4D57 /* SocketEngineClient.swift */,
+				3F337FBA19519853425F5CF161DEF839 /* SocketEnginePacketType.swift */,
+				C141207B400F42D68F171DB79F98B01D /* SocketEnginePollable.swift */,
+				097E7AEE0E9745474734518C7188A219 /* SocketEngineSpec.swift */,
+				344B2436D0CF259979AEFE408B65032A /* SocketEngineWebsocket.swift */,
+				37CC6CF58B80E478DF34D04069291749 /* SocketEventHandler.swift */,
+				1C5539471E7B5157375CE54B406BF73E /* SocketExtensions.swift */,
+				886C7DC7360B76C774C44FBA9C496820 /* SocketIOClient.swift */,
+				B18722A4B741456B8EEF85FE1161F9A0 /* SocketIOClientConfiguration.swift */,
+				5733787BCE298FC9950651DDCE6BC99C /* SocketIOClientOption.swift */,
+				6BD0787175F3EAFF4E2908B396304A37 /* SocketIOClientSpec.swift */,
+				06D45780B87C7CEC0BF34462A7D27817 /* SocketIOClientStatus.swift */,
+				E17B802B2A6A2E0A67F774EA8DD0F001 /* SocketLogger.swift */,
+				9BD0DBF1CA93D9C8FD6F6AB6F1067AC8 /* SocketPacket.swift */,
+				E8B851CCF663995C6AD0DD472924FA80 /* SocketParsable.swift */,
+				273F7B79C48C00C122A1697F747A0BD0 /* SocketStringReader.swift */,
+				3CFE488278315FE581390954F0A18391 /* SocketTypes.swift */,
+				ACEEF0CFD18ADF046D1468BFB36F003C /* SSLSecurity.swift */,
+				6F8A8F2430A32E1269015F420123DCAD /* WebSocket.swift */,
+				87DC7F99FFFB98D994D8571AC1227BAB /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MMMarkdown";
+			path = "Socket.IO-Client-Swift";
 			sourceTree = "<group>";
 		};
-		371DFC63397889CA25815F62CA363377 /* Products */ = {
+		16945A48DF66B46091A18429756BC1B1 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C861B0C6856AFF7CD413413DFDF0AA1B /* libMMMarkdown.a */,
-				D2B049F6EDEE1EE756DA2E42D3F3CDD4 /* libPods-PennAppsXIV.a */,
+				6A0B7682A76D03AA34004BAA4BBD1AED /* Pods-PennAppsXIV */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3C4BDBC0ADB4155C47F606A53B26CD5E /* Pods */ = {
+		1CDFD9600975C08100D3F68990DE4BE9 /* MMMarkdown */ = {
 			isa = PBXGroup;
 			children = (
-				DB8358D6CEC1289AD86A30DDA69FF158 /* MMMarkdown */,
+				F8B17A0CCF71F04DFA9E86BC8ACE0E7A /* MMDocument.h */,
+				1184588139CFD6DCBD2DC0C1893D4F6D /* MMDocument.m */,
+				DC09E127B3CEEB569CA619B08863D164 /* MMDocument_Private.h */,
+				7282B01D773D8E47D7A888986C3A9EB4 /* MMElement.h */,
+				6832FA039036A7D1B49511F04AE26A9E /* MMElement.m */,
+				F91B6601D71636CB680B825557BCE2C5 /* MMGenerator.h */,
+				61EB45DAE2B768F1C2A91C86D9871B7A /* MMGenerator.m */,
+				8085559C0944AD110DA8807417282E3E /* MMHTMLParser.h */,
+				2D9DC4B6314781CBF385EABF2C532EAA /* MMHTMLParser.m */,
+				9355EAFC1F7081C09CC0124BE7A52A51 /* MMMarkdown.h */,
+				C5C43CE221FE41FE94487AAAF819B776 /* MMMarkdown.m */,
+				7C2B92709D636950AAFCE5992CC320F4 /* MMParser.h */,
+				C4E49F84BFD3563534CCDA33A08C52BF /* MMParser.m */,
+				A98ED21D4DCDC6CAA65386C710B14399 /* MMScanner.h */,
+				811367BE719C5D5A0CF3CE7088E5CB8F /* MMScanner.m */,
+				76D22615BA09B60D72F0EAD8CD9CC606 /* MMSpanParser.h */,
+				3E12048D69E6B6EF90A5BB5FF184B0E8 /* MMSpanParser.m */,
+				968CC9CE236CA192795EC2E43D69DB12 /* Support Files */,
 			);
-			name = Pods;
+			path = MMMarkdown;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -130,12 +248,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		731172892F6FE028478D7F391980C7FA /* Targets Support Files */ = {
+		505EBA6695DEF45991A5FFA6C22464AB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A9EFF96599478F880543917382A1DADC /* Pods-PennAppsXIV */,
+				1CDFD9600975C08100D3F68990DE4BE9 /* MMMarkdown */,
+				03CBCDB87CFDDB1FE4B492C4EBA15C97 /* Socket.IO-Client-Swift */,
 			);
-			name = "Targets Support Files";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A0B7682A76D03AA34004BAA4BBD1AED /* Pods-PennAppsXIV */ = {
+			isa = PBXGroup;
+			children = (
+				BD0CAFBAA7524C4700B6690409F8DD67 /* Info.plist */,
+				9FDF24C4694D50B553EDF744EA4CC932 /* Pods-PennAppsXIV.modulemap */,
+				9361C46B6268B5673D91F8802FA33655 /* Pods-PennAppsXIV-acknowledgements.markdown */,
+				4348AC409D30BF83F6227FE6E5B0A3CD /* Pods-PennAppsXIV-acknowledgements.plist */,
+				4202F80DAAD8A5B8040988F41C23E04C /* Pods-PennAppsXIV-dummy.m */,
+				1E725B5C9CE71CA1CFA6F687B6D31C1D /* Pods-PennAppsXIV-frameworks.sh */,
+				DF6D04D5AC3347057B29DEE82FD4FFF6 /* Pods-PennAppsXIV-resources.sh */,
+				6FA47A7F6368E8F5A168FF2933714540 /* Pods-PennAppsXIV-umbrella.h */,
+				73791FA2436EF99B82C3F6F34662EA34 /* Pods-PennAppsXIV.debug.xcconfig */,
+				0AFB3C67F0BC5624DDCED6D40F4ADCDC /* Pods-PennAppsXIV.release.xcconfig */,
+			);
+			name = "Pods-PennAppsXIV";
+			path = "Target Support Files/Pods-PennAppsXIV";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -143,25 +280,48 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3C4BDBC0ADB4155C47F606A53B26CD5E /* Pods */,
-				371DFC63397889CA25815F62CA363377 /* Products */,
-				731172892F6FE028478D7F391980C7FA /* Targets Support Files */,
+				505EBA6695DEF45991A5FFA6C22464AB /* Pods */,
+				B4D2F7F4AFAC930074B4494320C48FB4 /* Products */,
+				16945A48DF66B46091A18429756BC1B1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A9EFF96599478F880543917382A1DADC /* Pods-PennAppsXIV */ = {
+		87DC7F99FFFB98D994D8571AC1227BAB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7DEA9264A86151C7D474D892144139AF /* Pods-PennAppsXIV-acknowledgements.markdown */,
-				501C9531493AF3EBC6F21EA80F471B6B /* Pods-PennAppsXIV-acknowledgements.plist */,
-				36EA9652D1D8E29052EF7D09FC69DC99 /* Pods-PennAppsXIV-dummy.m */,
-				EF58D163EAD2C6ADC92134D7041DE934 /* Pods-PennAppsXIV-frameworks.sh */,
-				71D5CA4D3DBB06CC65363132B1DB0954 /* Pods-PennAppsXIV-resources.sh */,
-				8B0655DC9D12DB4A5A8106DFC7EE6106 /* Pods-PennAppsXIV.debug.xcconfig */,
-				BC6A40897AB7CA0E013B821CE358E5D3 /* Pods-PennAppsXIV.release.xcconfig */,
+				9FF643CAB136E167733A8A9C45A0E727 /* Info.plist */,
+				472DBDD3731BC338B262A39304E0746B /* Socket.IO-Client-Swift.modulemap */,
+				BF20699DCE1634CD9CD2B437FED8BFF1 /* Socket.IO-Client-Swift.xcconfig */,
+				613A293AD4C73275E709D8213932C0E9 /* Socket.IO-Client-Swift-dummy.m */,
+				C2BB312CF79B8A910E9041A22493A568 /* Socket.IO-Client-Swift-prefix.pch */,
+				D4289B249F80D4F0CF72F4342E1617C2 /* Socket.IO-Client-Swift-umbrella.h */,
 			);
-			name = "Pods-PennAppsXIV";
-			path = "Target Support Files/Pods-PennAppsXIV";
+			name = "Support Files";
+			path = "../Target Support Files/Socket.IO-Client-Swift";
+			sourceTree = "<group>";
+		};
+		968CC9CE236CA192795EC2E43D69DB12 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C53C7837FBAA4E3D1BCC520E34A15865 /* Info.plist */,
+				8C749CC9EE9BA6A61514FBAA6A6CD901 /* MMMarkdown.modulemap */,
+				96863279A00DDD7CDB070566213DC1AA /* MMMarkdown.xcconfig */,
+				2F1DDE4F59521FA4D0370081A5E61157 /* MMMarkdown-dummy.m */,
+				E69BCE16737F2618B0D616BC7CFA2019 /* MMMarkdown-prefix.pch */,
+				67F7B2237B6A3580479FB5BE1BBFAE3C /* MMMarkdown-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMMarkdown";
+			sourceTree = "<group>";
+		};
+		B4D2F7F4AFAC930074B4494320C48FB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5A42A2D3F6D9D3A2C82ED51A0F7B0D3 /* MMMarkdown.framework */,
+				5065724BDA7E72555DB7D5D7775914C3 /* Pods_PennAppsXIV.framework */,
+				5CFE7FD34F2A43014F5466EC812CE21B /* SocketIO.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -172,77 +332,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DB8358D6CEC1289AD86A30DDA69FF158 /* MMMarkdown */ = {
-			isa = PBXGroup;
-			children = (
-				E0F5DE4B0D68D539B1021364E361F9C8 /* MMDocument.h */,
-				EB0EDE5024B2E539D6D4E6AC6592D34E /* MMDocument.m */,
-				DF7B6851EEA194F88E35202B9E4F6C0A /* MMDocument_Private.h */,
-				4CD622CDE9CA5F3EFED44542940E8819 /* MMElement.h */,
-				DE56C7D83FF29C4DFB624183F5242156 /* MMElement.m */,
-				3F95A25E4A1E88EA0C30DC232990E9E1 /* MMGenerator.h */,
-				B69FCC97BC5AAD3E39E29C9350836E82 /* MMGenerator.m */,
-				AF4ABA594B3873A3347315D20E1C6F71 /* MMHTMLParser.h */,
-				3B6314770657ED798322404671D8F0C7 /* MMHTMLParser.m */,
-				41F5AEC1741AD789B5D0B61415F7601C /* MMMarkdown.h */,
-				6620E107B59524C40452EABC2839C7FF /* MMMarkdown.m */,
-				8D1E5E144A7CA8D0EF1FA042EE261F70 /* MMParser.h */,
-				217F3560E1BB1F43F9005B10FBA46BEA /* MMParser.m */,
-				902E1B2F66B76C32CF60D69D5F0588ED /* MMScanner.h */,
-				6946D6114066EFAD2FA4F33E3A14B9C0 /* MMScanner.m */,
-				ABE02D3EE70F6316B2FAA7EAA31ADFB7 /* MMSpanParser.h */,
-				34A7CE593F1735DAD8D3AF03D183954D /* MMSpanParser.m */,
-				0E06BB082451123C2F2C62C1F0890D33 /* Support Files */,
-			);
-			path = MMMarkdown;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2E9C10B7C11E98B9E457E5516966620A /* Headers */ = {
+		1F1CE7A027F67723F30237405CD8786E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7A37E07EF02F0BBDBDE669683987C9 /* MMDocument.h in Headers */,
-				729D58C773B135F31836E9F240968E38 /* MMDocument_Private.h in Headers */,
-				24E182F8F4421B0A959EA3637986BC13 /* MMElement.h in Headers */,
-				2C6806FD6A0195BFE11BC8B9FA32F079 /* MMGenerator.h in Headers */,
-				1996B47C7BAF27F9B910C07FD9D96BC6 /* MMHTMLParser.h in Headers */,
-				93F880C24A7037EC95F2D86229DED4C1 /* MMMarkdown.h in Headers */,
-				7D7EB438B37174942C0E35A91D6F100D /* MMParser.h in Headers */,
-				4A32E817A9E0324D99E2D014EE7A1077 /* MMScanner.h in Headers */,
-				DF56699030CB0CE372337A1B567B8034 /* MMSpanParser.h in Headers */,
+				FC8B2F0103B299982B823D6324AC2AD0 /* Pods-PennAppsXIV-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24289224478CF67AEAEBE312F36F273 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F579B335AD8FEEAC20D82405369F2A8 /* MMDocument.h in Headers */,
+				D6B175BCBBA0C642A3C1482903237A0F /* MMDocument_Private.h in Headers */,
+				A536282788E1371ECF368371B0E97F9B /* MMElement.h in Headers */,
+				9E3CAED8F035C1236A0F9AF1B3573723 /* MMGenerator.h in Headers */,
+				3A07FBAD4E23015CFF450B31126275FC /* MMHTMLParser.h in Headers */,
+				E026AD504E7AE2C7D9FBD07EADF5B360 /* MMMarkdown-umbrella.h in Headers */,
+				B600BF7A9820F7FC41EE2DA41C6267F4 /* MMMarkdown.h in Headers */,
+				D2F1CD89F0E80A5639D68962AC2E9865 /* MMParser.h in Headers */,
+				5E32303213B75CCA54D1DA6C77BBB7A0 /* MMScanner.h in Headers */,
+				4953074C7B766AC924935E060301122A /* MMSpanParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6213242F2C2B4771D26D9207AAA5E06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834848B3B5E7F06756B5319B472614B0 /* Socket.IO-Client-Swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		21F78DC158F04039558C8D085AC6578F /* Pods-PennAppsXIV */ = {
+		0F47DB72F4E441BA71079BC608EB4E25 /* Pods-PennAppsXIV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43A62D79D28A319997E0BE3E108E57E5 /* Build configuration list for PBXNativeTarget "Pods-PennAppsXIV" */;
+			buildConfigurationList = 743ACDA4F545E65A2247966E4E72E25A /* Build configuration list for PBXNativeTarget "Pods-PennAppsXIV" */;
 			buildPhases = (
-				BFFFDC67129B7F9CEA925AC03D7B86C5 /* Sources */,
-				F351BCC9231E469317370BCC53B4D31C /* Frameworks */,
+				7F9CE254D91C89A23EAAF3740C3C2E7B /* Sources */,
+				15A0AC7BFC7EF29ECD583004B6C83709 /* Frameworks */,
+				1F1CE7A027F67723F30237405CD8786E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85E46086B008EC8B3EC0E657DB28F825 /* PBXTargetDependency */,
+				FF5CBBFC7C8BEFABDCF96E80A7839BFC /* PBXTargetDependency */,
+				E3D165C26BCA94C107FBF96227EB7B1C /* PBXTargetDependency */,
 			);
 			name = "Pods-PennAppsXIV";
 			productName = "Pods-PennAppsXIV";
-			productReference = D2B049F6EDEE1EE756DA2E42D3F3CDD4 /* libPods-PennAppsXIV.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 5065724BDA7E72555DB7D5D7775914C3 /* Pods_PennAppsXIV.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		F0C7F9FBF3A825957E5748F71026206C /* MMMarkdown */ = {
+		3EBB97988EA73CAED65A10806B0BB121 /* MMMarkdown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9BC367714C3C23895B09B54A5BE415D /* Build configuration list for PBXNativeTarget "MMMarkdown" */;
+			buildConfigurationList = A2BED1D92311770D92427FADED593BFC /* Build configuration list for PBXNativeTarget "MMMarkdown" */;
 			buildPhases = (
-				6A46FAD712AFC4EEBA9AB8FD1C96C57D /* Sources */,
-				F6D80A8832D9F84C078881CEF4958962 /* Frameworks */,
-				2E9C10B7C11E98B9E457E5516966620A /* Headers */,
+				58682AD8482339B589DD4CFE8AFABC6B /* Sources */,
+				9623E9EE3A90CE345BEF3E7C8899FF40 /* Frameworks */,
+				C24289224478CF67AEAEBE312F36F273 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -250,8 +404,25 @@
 			);
 			name = MMMarkdown;
 			productName = MMMarkdown;
-			productReference = C861B0C6856AFF7CD413413DFDF0AA1B /* libMMMarkdown.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = C5A42A2D3F6D9D3A2C82ED51A0F7B0D3 /* MMMarkdown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B3210A66B8BD865B15C87A951E58B478 /* Socket.IO-Client-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A041961219EB53CFBD2B52D288E35CD5 /* Build configuration list for PBXNativeTarget "Socket.IO-Client-Swift" */;
+			buildPhases = (
+				377DBAB6218B9F08A4D405BD334A924A /* Sources */,
+				BA14A631D049F8E6729C2153030CB19B /* Frameworks */,
+				C6213242F2C2B4771D26D9207AAA5E06 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Socket.IO-Client-Swift";
+			productName = "Socket.IO-Client-Swift";
+			productReference = 5CFE7FD34F2A43014F5466EC812CE21B /* SocketIO.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -261,6 +432,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					0F47DB72F4E441BA71079BC608EB4E25 = {
+						LastSwiftMigration = 0800;
+					};
+					B3210A66B8BD865B15C87A951E58B478 = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -270,71 +449,152 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 371DFC63397889CA25815F62CA363377 /* Products */;
+			productRefGroup = B4D2F7F4AFAC930074B4494320C48FB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F0C7F9FBF3A825957E5748F71026206C /* MMMarkdown */,
-				21F78DC158F04039558C8D085AC6578F /* Pods-PennAppsXIV */,
+				3EBB97988EA73CAED65A10806B0BB121 /* MMMarkdown */,
+				0F47DB72F4E441BA71079BC608EB4E25 /* Pods-PennAppsXIV */,
+				B3210A66B8BD865B15C87A951E58B478 /* Socket.IO-Client-Swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6A46FAD712AFC4EEBA9AB8FD1C96C57D /* Sources */ = {
+		377DBAB6218B9F08A4D405BD334A924A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6953FCF9A68B7ECD3B5F4F83DC4A4B90 /* MMDocument.m in Sources */,
-				91C098841210023D13FB451AA4903B32 /* MMElement.m in Sources */,
-				3882FBBA2E29B39D1EFDBE6B6CFF1460 /* MMGenerator.m in Sources */,
-				65E7EB76497A635B67C08FCB59C06706 /* MMHTMLParser.m in Sources */,
-				1D3F62C41C996B4D422BCA7220DE6C32 /* MMMarkdown-dummy.m in Sources */,
-				DB16A82DAA13C0A874C708620750D8E4 /* MMMarkdown.m in Sources */,
-				9FE608F66E9F1FB064725922EA5C56C5 /* MMParser.m in Sources */,
-				DA672D62A4684D94CBD7B272ECFE3852 /* MMScanner.m in Sources */,
-				8D313F95B9AA7137A0C7471B156C0EF3 /* MMSpanParser.m in Sources */,
+				6D0DCC2F3D631D040B207AF277AA4168 /* Socket.IO-Client-Swift-dummy.m in Sources */,
+				0E053D32A28F5499FC956993308CCA60 /* SocketAckEmitter.swift in Sources */,
+				64B1FD0ED8492CC2E6D9A370D5C79F72 /* SocketAckManager.swift in Sources */,
+				A59560C97272E6B403AADB6883D561A3 /* SocketAnyEvent.swift in Sources */,
+				C32CB5126B2F2E18C6D9392FD25EDD0E /* SocketClientManager.swift in Sources */,
+				9B0AF9BF528E68A348BB9186778966A4 /* SocketEngine.swift in Sources */,
+				3F20BF586892C8AEC424F1D97067EB39 /* SocketEngineClient.swift in Sources */,
+				E1F6CFDC0875F18432A4EF62C09C9F05 /* SocketEnginePacketType.swift in Sources */,
+				263400F7298679BE9EE19E6F6E14BEAB /* SocketEnginePollable.swift in Sources */,
+				6387DA3C9BECCE0D725E30C2DAB61A71 /* SocketEngineSpec.swift in Sources */,
+				C98A3588900E70AEB1E01777581A2011 /* SocketEngineWebsocket.swift in Sources */,
+				ECB8EFB806E8C363D449DF1647A78300 /* SocketEventHandler.swift in Sources */,
+				890C62A82030A844B70C0CC49BAF9A76 /* SocketExtensions.swift in Sources */,
+				D8472F161F97D10686CFF86E27D00C22 /* SocketIOClient.swift in Sources */,
+				B28A60D95E3BEC6A81FD5C04B429024D /* SocketIOClientConfiguration.swift in Sources */,
+				DB123C55C1E90FDF2D265D6EFBBC2473 /* SocketIOClientOption.swift in Sources */,
+				995BB5F8C249EDD249F1F7252EE19612 /* SocketIOClientSpec.swift in Sources */,
+				48385B1000CCE4681795B2003AB0C55D /* SocketIOClientStatus.swift in Sources */,
+				F4C9A83F58870A32CCCBAA84A4398164 /* SocketLogger.swift in Sources */,
+				A9F2246AAFCA1C22E42DBA2C64677080 /* SocketPacket.swift in Sources */,
+				2AD40DF8218A64E5F3570CD56FD5ABD2 /* SocketParsable.swift in Sources */,
+				4C8F828E230E255008624CAFF67D4416 /* SocketStringReader.swift in Sources */,
+				CB57BB891774D54404BF9462A0AA350F /* SocketTypes.swift in Sources */,
+				824700988984FA152C24B39C55D9D1D2 /* SSLSecurity.swift in Sources */,
+				AB9B4A872DF045611113B7718B19A41A /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFFFDC67129B7F9CEA925AC03D7B86C5 /* Sources */ = {
+		58682AD8482339B589DD4CFE8AFABC6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6754D703E06F06E26C56A6DFD7344B /* Pods-PennAppsXIV-dummy.m in Sources */,
+				5EEB4E268388AA41133F5BA4E6985387 /* MMDocument.m in Sources */,
+				D3617577FDB641AB4F9951723DEA9381 /* MMElement.m in Sources */,
+				50F625C6CF0A296330AD2DED6B6BAD62 /* MMGenerator.m in Sources */,
+				F48EC5613185F3AA3CD5748093A6EC3C /* MMHTMLParser.m in Sources */,
+				28792D373D27BA53FEF02D3B2FC9C65C /* MMMarkdown-dummy.m in Sources */,
+				8B7D00F1F78C2D3F9A24099D1453E2F6 /* MMMarkdown.m in Sources */,
+				6485A2F3217C8205818FAA0B2E01D59B /* MMParser.m in Sources */,
+				EBF34E4A8FDF0349B4C0FA8B31CF4E9C /* MMScanner.m in Sources */,
+				898F35C3A2DC01496E69B5FAD86CAC09 /* MMSpanParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F9CE254D91C89A23EAAF3740C3C2E7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87DA80E0C84213F4B17515828E7AF2C4 /* Pods-PennAppsXIV-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85E46086B008EC8B3EC0E657DB28F825 /* PBXTargetDependency */ = {
+		E3D165C26BCA94C107FBF96227EB7B1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Socket.IO-Client-Swift";
+			target = B3210A66B8BD865B15C87A951E58B478 /* Socket.IO-Client-Swift */;
+			targetProxy = 7AB711EF0FD92D2462E760D30CD9C762 /* PBXContainerItemProxy */;
+		};
+		FF5CBBFC7C8BEFABDCF96E80A7839BFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MMMarkdown;
-			target = F0C7F9FBF3A825957E5748F71026206C /* MMMarkdown */;
-			targetProxy = C0B3ECD4FADCAFF3878FBC60B1DD55E6 /* PBXContainerItemProxy */;
+			target = 3EBB97988EA73CAED65A10806B0BB121 /* MMMarkdown */;
+			targetProxy = 2F721CC6E1AA67AC527D449EB80FA9F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		34CEF61695C0B93C07781D94F8586446 /* Release */ = {
+		02A04C8F50FB99ADF37976D3CA93D021 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37CA1AE8EA72923900035856EA1CB460 /* MMMarkdown.xcconfig */;
+			baseConfigurationReference = 96863279A00DDD7CDB070566213DC1AA /* MMMarkdown.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MMMarkdown/MMMarkdown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMMarkdown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMMarkdown/MMMarkdown.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MMMarkdown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B8303266A0CC3575BE378525626C207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AFB3C67F0BC5624DDCED6D40F4ADCDC /* Pods-PennAppsXIV.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PennAppsXIV/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PennAppsXIV;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -376,68 +636,40 @@
 			};
 			name = Release;
 		};
-		5041882FA381A647ECA8FA8434EFD20E /* Debug */ = {
+		49B3F28B67F5C6159D42128CEE32B45C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37CA1AE8EA72923900035856EA1CB460 /* MMMarkdown.xcconfig */;
+			baseConfigurationReference = 73791FA2436EF99B82C3F6F34662EA34 /* Pods-PennAppsXIV.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMMarkdown/MMMarkdown-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		806DF42A09DC7ADC6E917A72AEB1E298 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B0655DC9D12DB4A5A8106DFC7EE6106 /* Pods-PennAppsXIV.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PennAppsXIV/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_PennAppsXIV;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		896B21B48D552A22C600AE18F79BF536 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC6A40897AB7CA0E013B821CE358E5D3 /* Pods-PennAppsXIV.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
 		};
 		AE9439C22469D35336242DD983DB5C5F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -481,6 +713,96 @@
 			};
 			name = Debug;
 		};
+		B5B8C8013DD89C7ACB4175F9769FEE17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96863279A00DDD7CDB070566213DC1AA /* MMMarkdown.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MMMarkdown/MMMarkdown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMMarkdown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MMMarkdown/MMMarkdown.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MMMarkdown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C0EB3918F77BBE925AD66F09AFE91B73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF20699DCE1634CD9CD2B437FED8BFF1 /* Socket.IO-Client-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SocketIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F01AC5BAF2F8107A7267FE19CF0EC8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF20699DCE1634CD9CD2B437FED8BFF1 /* Socket.IO-Client-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Socket.IO-Client-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Socket.IO-Client-Swift/Socket.IO-Client-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SocketIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -493,20 +815,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43A62D79D28A319997E0BE3E108E57E5 /* Build configuration list for PBXNativeTarget "Pods-PennAppsXIV" */ = {
+		743ACDA4F545E65A2247966E4E72E25A /* Build configuration list for PBXNativeTarget "Pods-PennAppsXIV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				806DF42A09DC7ADC6E917A72AEB1E298 /* Debug */,
-				896B21B48D552A22C600AE18F79BF536 /* Release */,
+				49B3F28B67F5C6159D42128CEE32B45C /* Debug */,
+				3B8303266A0CC3575BE378525626C207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9BC367714C3C23895B09B54A5BE415D /* Build configuration list for PBXNativeTarget "MMMarkdown" */ = {
+		A041961219EB53CFBD2B52D288E35CD5 /* Build configuration list for PBXNativeTarget "Socket.IO-Client-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5041882FA381A647ECA8FA8434EFD20E /* Debug */,
-				34CEF61695C0B93C07781D94F8586446 /* Release */,
+				C0EB3918F77BBE925AD66F09AFE91B73 /* Debug */,
+				F01AC5BAF2F8107A7267FE19CF0EC8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2BED1D92311770D92427FADED593BFC /* Build configuration list for PBXNativeTarget "MMMarkdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5B8C8013DD89C7ACB4175F9769FEE17 /* Debug */,
+				02A04C8F50FB99ADF37976D3CA93D021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
