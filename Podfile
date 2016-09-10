@@ -4,7 +4,7 @@
 target 'PennAppsXIV' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   
-  
+  pod 'GRMustache'
   pod 'MMMarkdown'
   
   use_frameworks!

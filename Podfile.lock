@@ -1,8 +1,12 @@
 PODS:
+  - GRMustache (7.3.2):
+    - JRSwizzle (~> 1.0)
+  - JRSwizzle (1.0)
   - MMMarkdown (0.5.5)
   - Socket.IO-Client-Swift (7.0.3)
 
 DEPENDENCIES:
+  - GRMustache
   - MMMarkdown
   - Socket.IO-Client-Swift (from `https://github.com/socketio/socket.io-client-swift.git`, branch `development`)
 
@@ -17,9 +21,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/socketio/socket.io-client-swift.git
 
 SPEC CHECKSUMS:
+  GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   MMMarkdown: 1af97166ce0f6d6e0cb05695665492195d27c3f1
   Socket.IO-Client-Swift: a4d6474309fa82b52736888abe53a75ba33d09a1
 
-PODFILE CHECKSUM: da6ec124966c696b8021f24d94852a01cd33b061
+PODFILE CHECKSUM: 27c79c402e453fd1799e708c024f7a06f4b4c038
 
 COCOAPODS: 1.0.1

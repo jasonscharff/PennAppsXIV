@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GRMustache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JRSwizzle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MMMarkdown.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0F47DB72F4E441BA71079BC608EB4E25</key>
+		<key>15051665D795DBEC4AAF3E0B01433469</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E790C0E25EBD4F2D4AE02652E1CF6E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3210A66B8BD865B15C87A951E58B478</key>
+		<key>51D20FEE1E2D38700470BDB5A7D17E83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFBFCA4F096AB0D3379693A2F9D69D7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
