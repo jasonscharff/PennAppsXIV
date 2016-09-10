@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14FC69F9D2D3817EE356A824 /* libPods-PennAppsXIV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F01C0ED2324B2D233B837273 /* libPods-PennAppsXIV.a */; };
 		BED301981D84979100FC27AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED301971D84979100FC27AF /* main.m */; };
 		BED3019B1D84979100FC27AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019A1D84979100FC27AF /* AppDelegate.m */; };
 		BED3019E1D84979100FC27AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3019D1D84979100FC27AF /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CC8C478C017BC0CC9D90D62 /* Pods-PennAppsXIV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennAppsXIV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.debug.xcconfig"; sourceTree = "<group>"; };
 		BED301931D84979100FC27AF /* PennAppsXIV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennAppsXIV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED301971D84979100FC27AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BED301991D84979100FC27AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		BED301A21D84979100FC27AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED301A51D84979100FC27AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED301A71D84979100FC27AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7BB5CCB5EDBFD3E53CDEA6C /* Pods-PennAppsXIV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennAppsXIV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.release.xcconfig"; sourceTree = "<group>"; };
+		F01C0ED2324B2D233B837273 /* libPods-PennAppsXIV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PennAppsXIV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FC69F9D2D3817EE356A824 /* libPods-PennAppsXIV.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C8B54A15419958C2140DBA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8C478C017BC0CC9D90D62 /* Pods-PennAppsXIV.debug.xcconfig */,
+				D7BB5CCB5EDBFD3E53CDEA6C /* Pods-PennAppsXIV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		61C78496CA0407AE0D57E0EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F01C0ED2324B2D233B837273 /* libPods-PennAppsXIV.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BED3018A1D84979100FC27AF = {
 			isa = PBXGroup;
 			children = (
 				BED301951D84979100FC27AF /* PennAppsXIV */,
 				BED301941D84979100FC27AF /* Products */,
+				3C8B54A15419958C2140DBA6 /* Pods */,
+				61C78496CA0407AE0D57E0EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BED301AA1D84979100FC27AF /* Build configuration list for PBXNativeTarget "PennAppsXIV" */;
 			buildPhases = (
+				F89318B2019DD19D9C4ECB6A /* [CP] Check Pods Manifest.lock */,
 				BED3018F1D84979100FC27AF /* Sources */,
 				BED301901D84979100FC27AF /* Frameworks */,
 				BED301911D84979100FC27AF /* Resources */,
+				B948F15D7F86C5C8726F1A83 /* [CP] Embed Pods Frameworks */,
+				B53B5052FA5FDCE8A990BB99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B53B5052FA5FDCE8A990BB99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B948F15D7F86C5C8726F1A83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89318B2019DD19D9C4ECB6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BED3018F1D84979100FC27AF /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		BED301AB1D84979100FC27AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CC8C478C017BC0CC9D90D62 /* Pods-PennAppsXIV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3R5J785EXT;
@@ -281,6 +357,7 @@
 		};
 		BED301AC1D84979100FC27AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7BB5CCB5EDBFD3E53CDEA6C /* Pods-PennAppsXIV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3R5J785EXT;
@@ -310,6 +387,7 @@
 				BED301AC1D84979100FC27AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
