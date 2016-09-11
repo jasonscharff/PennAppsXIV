@@ -13,12 +13,13 @@
 
 @implementation NTENote
     
-- (instancetype)initWithDictonary : (NSDictionary *)dictionary {
-    self = [super init];
-    if(self) {
-        [self setupWithDictionary:dictionary];
-    }
-    return self;
++ (instancetype)sharedNote {
+    static dispatch_once_t onceToken;
+    static NTENote * _sharedInstance;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc]init];
+    });
+    return _sharedInstance;
 }
     
 - (void)setupWithDictionary : (NSDictionary *)dictionary {
@@ -29,13 +30,18 @@
         }
     }
     //This should be after to the html generated has images!
-    self.rawMarkdown = dictionary[@"markdown"];
+    if(dictionary[@"markdown"]) {
+        self.rawMarkdown = dictionary[@"markdown"];
+    }
+    
     
 }
 
 - (void)setRawMarkdown:(NSString *)rawMarkdown {
     _rawMarkdown = rawMarkdown;
-    self.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:self.rawMarkdown];
+    if(rawMarkdown) {
+        self.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:self.rawMarkdown];
+    }
 }
     
 @end

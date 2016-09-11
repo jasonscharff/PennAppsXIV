@@ -12,7 +12,8 @@
 
 @interface NTENote : NSObject
 
-- (instancetype)initWithDictonary : (NSDictionary *)dictionary;
++ (instancetype)sharedNote;
+- (void)setupWithDictionary : (NSDictionary *)dictionary;
 
 @property (nonatomic) NSString *rawMarkdown;
 @property (nonatomic) NSString *html;

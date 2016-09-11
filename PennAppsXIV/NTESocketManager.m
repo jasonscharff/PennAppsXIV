@@ -58,8 +58,8 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
     [self.socketIOClient on:@"init" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
         if(data.count > 0) {
             NSDictionary *dictionary = data[0];
-            NTENote *note = [[NTENote alloc]initWithDictonary:dictionary];
-            [NTEDisplayViewController sharedNTEDisplayViewController].note = note;
+            [[NTENote sharedNote]setupWithDictionary:dictionary];
+            [NTEDisplayViewController sharedNTEDisplayViewController].note = [NTENote sharedNote];
         }
     }];
     
@@ -67,8 +67,8 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
         NSLog(@"data update = %@", data);
         if(data.count > 0) {
             NSDictionary *dictionary = data[0];
-            NTENote *note = [[NTENote alloc]initWithDictonary:dictionary];
-            [NTEDisplayViewController sharedNTEDisplayViewController].note = note;
+            [[NTENote sharedNote]setupWithDictionary:dictionary];
+            [NTEDisplayViewController sharedNTEDisplayViewController].note = [NTENote sharedNote];
         }
     }];
     
@@ -87,20 +87,23 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
 
 - (void)uploadImage : (UIImage *)image
               order : (int)order {
-    NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64DataForImage:image];
-    NSDictionary *parameters = @{@"image" : base64,
-                                 @"order" : @(order)};
-    [self.socketIOClient emit:@"imageUpdate" with:@[parameters]];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64DataForImage:image];
+        NSDictionary *parameters = @{@"image" : base64,
+                                     @"order" : @(order)};
+        [self.socketIOClient emit:@"imageUpdate" with:@[parameters]];
+        
+        
+        NTENote *currentNote = [NTEDisplayViewController sharedNTEDisplayViewController].note;
+        
+        NSString *base64URI = [NSString stringWithFormat:@"data:%@;base64,%@", base64, @"image/jpeg"];
+    });
     
     
-    NTENote *currentNote = [NTEDisplayViewController sharedNTEDisplayViewController].note;
-    
-    NSString *base64URI = [NSString stringWithFormat:@"data:%@;base64,%@", base64, @"image/jpeg"];
-    
-    currentNote.rawMarkdown = [[NTEMarkdownRenderController sharedRenderController]replaceButtonAtPosition:order
-                                                                                                 withImage:base64URI
-                                                                                               forMarkDown:currentNote.rawMarkdown];
-    [NTEDisplayViewController sharedNTEDisplayViewController].note = currentNote;
+//    currentNote.rawMarkdown = [[NTEMarkdownRenderController sharedRenderController]replaceButtonAtPosition:order
+//                                                                                                 withImage:base64URI
+//                                                                                               forMarkDown:currentNote.rawMarkdown];
+//    [NTEDisplayViewController sharedNTEDisplayViewController].note = currentNote;
     
 }
 
