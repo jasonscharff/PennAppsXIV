@@ -95,10 +95,10 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
     NSRange endRange = [originalString rangeOfString:@"]"];
     NSString *originalAltText = [originalString substringWithRange:NSMakeRange(startRange.location+startRange.length, endRange.location-startRange.location-startRange.length)];
     
-    NSString *replacement = [NSString stringWithFormat:@"![%@](images/dfa.png)", originalAltText];
+    NSString *replacement = [NSString stringWithFormat:@"![%@](%@)", originalAltText, base64];
     
-    return [markdown stringByReplacingCharactersInRange:match.range withString:replacement];
-    
+    NSString *new = [markdown stringByReplacingCharactersInRange:match.range withString:replacement];
+    return new;
 }
 
 - (NSString *)replaceImagesWithBase64 : (NSString *)markdown{
@@ -122,9 +122,14 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
             NSString *path = [originalString substringWithRange:NSMakeRange(endRange.location+endRange.length,
                                                            originalString.length-endRange.location-endRange.length-1)];
             
-            NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64ForImageName:path];
-            NSString *newString = [originalString stringByReplacingOccurrencesOfString:path withString:base64];
-            newMarkdown = [newMarkdown stringByReplacingOccurrencesOfString:originalString withString:newString];
+            if(![path hasPrefix:@"data"]) {
+                NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64ForImageName:path];
+                if(base64) {
+                    NSString *newString = [originalString stringByReplacingOccurrencesOfString:path withString:base64];
+                    newMarkdown = [newMarkdown stringByReplacingOccurrencesOfString:originalString withString:newString];
+                }
+
+            }
         }
         
         return [NSString stringWithString:newMarkdown];

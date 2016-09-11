@@ -29,6 +29,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.title = @"Scan a QR Code";
     [self startReading];
 }
