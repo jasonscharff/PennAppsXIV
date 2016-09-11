@@ -23,9 +23,11 @@
     
 - (void)setupWithDictionary : (NSDictionary *)dictionary {
     self.rawMarkdown = dictionary[@"markdown"];
-    NSArray *images = dictionary[@"images"];
-    for (NSDictionary *image in images) {
-        [[NTEImageStoreController sharedImageStoreController]addImageFromDictionary:image];
+    if(dictionary[@"images"]) {
+        NSArray *images = dictionary[@"images"];
+        for (NSDictionary *image in images) {
+            [[NTEImageStoreController sharedImageStoreController]addImageFromDictionary:image];
+        }
     }
     self.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:self.rawMarkdown];
 }

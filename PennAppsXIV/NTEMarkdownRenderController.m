@@ -93,9 +93,9 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
         for (int i = 0; i < instances.count; i++) {
             NSTextCheckingResult *match = instances[i];
             NSString *originalString = [markdown substringWithRange:match.range];
-            NSRange endRange = [originalString rangeOfString:@")["];
+            NSRange endRange = [originalString rangeOfString:@"]("];
             NSString *path = [originalString substringWithRange:NSMakeRange(endRange.location+endRange.length,
-                                                           originalString.length-endRange.location-endRange.length)];
+                                                           originalString.length-endRange.location-endRange.length-1)];
             
             NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64ForImageName:path];
             NSString *newString = [originalString stringByReplacingOccurrencesOfString:path withString:base64];
@@ -108,7 +108,7 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
 
 - (NSString *)replaceMissingImagesWithButtons : (NSString *)markdown {
     NSError *error;
-    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"!\[([\\s\\S]*?)\\]!" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"!\\[[\\s\\S]*?\\]!" options:NSRegularExpressionCaseInsensitive error:&error];
     if(error) {
         NSLog(@"error with regex %@", error.localizedDescription);
         return markdown;

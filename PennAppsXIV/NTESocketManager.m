@@ -47,25 +47,37 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
         
         [self.socketIOClient disconnect];
     }
-    NSDictionary *options = @{@"secure" : @NO,
-                              @"log" : @NO};
     
-    self.socketIOClient = [[SocketIOClient alloc]initWithSocketURL:_baseURL config:options];
+    self.socketIOClient = [[SocketIOClient alloc]initWithSocketURL:_baseURL config:nil];
     
     [self.socketIOClient on:@"connect" callback:^(NSArray* data, SocketAckEmitter* ack) {
-        NSLog(@"data onc = %@", data);
-        NSDictionary *dictionary = data[0];
-        NTENote *note = [[NTENote alloc]initWithDictonary:dictionary];
-        [NTEDisplayViewController sharedNTEDisplayViewController].note = note;
+
+    }];
+    
+    [self.socketIOClient on:@"init" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
+        if(data.count > 0) {
+            NSDictionary *dictionary = data[0];
+            NTENote *note = [[NTENote alloc]initWithDictonary:dictionary];
+            [NTEDisplayViewController sharedNTEDisplayViewController].note = note;
+        }
     }];
     
     [self.socketIOClient on:@"data" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
         NSLog(@"data update = %@", data);
+        if(data.count > 0) {
+            NSDictionary *dictionary = data[0];
+            NTENote *note = [[NTENote alloc]initWithDictonary:dictionary];
+            [NTEDisplayViewController sharedNTEDisplayViewController].note = note;
+        }
     }];
     
     [self.socketIOClient on:@"disconnect" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
        //Go back to the qr code manager.
         
+    }];
+    
+    [self.socketIOClient on:@"error" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
+        NSLog(@"ERROR");
     }];
     
     [self.socketIOClient connect];
