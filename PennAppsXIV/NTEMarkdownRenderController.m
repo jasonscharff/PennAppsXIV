@@ -59,7 +59,6 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
     //Next step is to do some regex on it first.
     NSError *error;
     markdown = [self replaceMissingImagesWithButtons:markdown];
-    markdown = [self replaceImagesWithBase64:markdown];
     NSDictionary *replacementsDictionary = [self removeMathematicalFormattingFromMarkdown:markdown];
     NSString *cleanedUpMarkDown = replacementsDictionary[@"markdown"];
     NSDictionary *replacements = replacementsDictionary[@"replacements"];
@@ -73,6 +72,7 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
         //Show some alert.
     }
     NSString *inHTML = [self embedHTMLContentInTemplate:markdownAsHTML];
+    inHTML = [self replaceImagesWithBase64:inHTML];
     return [self addMathematicalFormattingToMarkdown:inHTML withDictionary:replacements];
 }
 
@@ -99,38 +99,40 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
     
 }
 
-- (NSString *)replaceImagesWithBase64 : (NSString *)markdown{
+- (NSString *)replaceImagesWithBase64 : (NSString *)html{
     NSError *error;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"!\\[[^\\]]+\\]\\([^)]+\\)"
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<img[^>]*>"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:&error];
     if(error) {
         NSLog(@"error with regex = %@", error.localizedDescription);
-        return markdown;
+        return html;
     } else {
-        NSArray *instances = [regex matchesInString:markdown
+        NSArray *instances = [regex matchesInString:html
                                             options:NSMatchingReportProgress
-                                              range:NSMakeRange(0, markdown.length)];
-        NSString *newMarkdown = [[NSMutableString alloc]initWithString:markdown];
+                                              range:NSMakeRange(0, html.length)];
+        NSString *newHTML = [[NSString alloc]initWithString:html];
         
         for (int i = 0; i < instances.count; i++) {
             NSTextCheckingResult *match = instances[i];
-            NSString *originalString = [markdown substringWithRange:match.range];
-            NSRange endRange = [originalString rangeOfString:@"]("];
-            NSString *path = [originalString substringWithRange:NSMakeRange(endRange.location+endRange.length,
-                                                           originalString.length-endRange.location-endRange.length-1)];
+            NSString *original = [html substringWithRange:match.range];
+            NSRegularExpression *srcRegex = [NSRegularExpression regularExpressionWithPattern:@"src=\"[^\"]*\""
+                                                                                      options:NSRegularExpressionCaseInsensitive
+                                                                                        error:&error];
+            NSTextCheckingResult *srcResult = [srcRegex firstMatchInString:original options:NSMatchingReportProgress range:NSMakeRange(0, original.length)];
+            NSString *src = [original substringWithRange:srcResult.range];
             
-            if(![path hasPrefix:@"data"]) {
-                NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64ForImageName:path];
-                if(base64) {
-                    NSString *newString = [originalString stringByReplacingOccurrencesOfString:path withString:base64];
-                    newMarkdown = [newMarkdown stringByReplacingOccurrencesOfString:originalString withString:newString];
-                }
-
+    
+            NSString *start = @"src=\"";
+            NSString *imageName = [src substringWithRange:NSMakeRange(start.length, src.length-start.length-1)];
+            if(![imageName hasPrefix:@"data"]) {
+                NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64ForImageName:imageName];
+                NSString *replacement = [NSString stringWithFormat:@"<img src=%@>", base64];
+                newHTML = [newHTML stringByReplacingOccurrencesOfString:original withString:replacement];
             }
         }
         
-        return [NSString stringWithString:newMarkdown];
+        return newHTML;
     }
 }
 

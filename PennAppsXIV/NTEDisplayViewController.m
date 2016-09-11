@@ -58,7 +58,9 @@ UINavigationControllerDelegate>
     _note = note;
     if(self.viewLoaded) {
         if(note.html) {
-            [self.webView loadHTMLString:note.html baseURL:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.webView loadHTMLString:note.html baseURL:nil];
+            });
         }
         
     }
@@ -116,11 +118,41 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *scaledImage;
+    if(image.size.width > 700) {
+        scaledImage = [self scaleImage:image toSize:CGSizeMake(700, image.size.width/image.size.height * 700)];
+    } else {
+        scaledImage = image;
+    }
+    
     //Show some sort of crop view controller.
-    [[NTESocketManager sharedSocket]uploadImage:image order:self.order];
+    [[NTESocketManager sharedSocket]uploadImage:scaledImage order:self.order];
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UIImage*) scaleImage:(UIImage*)image toSize:(CGSize)newSize {
+    CGSize scaledSize = newSize;
+    float scaleFactor = 1.0;
+    if( image.size.width > image.size.height ) {
+        scaleFactor = image.size.width / image.size.height;
+        scaledSize.width = newSize.width;
+        scaledSize.height = newSize.height / scaleFactor;
+    }
+    else {
+        scaleFactor = image.size.height / image.size.width;
+        scaledSize.height = newSize.height;
+        scaledSize.width = newSize.width / scaleFactor;
+    }
+    
+    UIGraphicsBeginImageContextWithOptions( scaledSize, NO, 0.0 );
+    CGRect scaledImageRect = CGRectMake( 0.0, 0.0, scaledSize.width, scaledSize.height );
+    [image drawInRect:scaledImageRect];
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
 }
 
 
