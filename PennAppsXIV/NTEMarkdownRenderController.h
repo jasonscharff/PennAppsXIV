@@ -14,8 +14,10 @@ extern NSString * const kNTEUploadActionPrefix;
 
 + (instancetype)sharedRenderController;
 - (NSString *)generateHTMLFromMarkdown : (NSString *)markdown;
+
 - (NSString *)replaceButtonAtPosition : (int)position
                             withImage : (NSString *)base64
-                          forMarkDown : (NSString *)markdown;
+                              forHTML : (NSString *)html;
+
     
 @end

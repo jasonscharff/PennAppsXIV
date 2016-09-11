@@ -78,27 +78,26 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
 
 - (NSString *)replaceButtonAtPosition : (int)position
                             withImage : (NSString *)base64
-                          forMarkDown : (NSString *)markdown {
+                              forHTML : (NSString *)html {
     NSError *error;
-    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"!\\[[\\s\\S]*?\\]!" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<a href=([^>])*class=\"nte-upload-button\".*<\\/a>"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
     if(error) {
         NSLog(@"error with regex %@", error.localizedDescription);
-        return markdown;
+        return html;
     }
-    NSArray *instances = [regularExpression matchesInString:markdown
+    NSArray *instances = [regex matchesInString:html
                                                     options:NSMatchingReportProgress
-                                                      range:NSMakeRange(0, markdown.length)];
+                                                      range:NSMakeRange(0, html.length)];
     
     NSTextCheckingResult *match = instances[position];
-    NSString *originalString = [markdown substringWithRange:match.range];
-    NSRange startRange = [originalString rangeOfString:@"!["];
-    NSRange endRange = [originalString rangeOfString:@"]"];
-    NSString *originalAltText = [originalString substringWithRange:NSMakeRange(startRange.location+startRange.length, endRange.location-startRange.location-startRange.length)];
+    NSString *originalString = [html substringWithRange:match.range];
     
-    NSString *replacement = [NSString stringWithFormat:@"![%@](%@)", originalAltText, base64];
+    NSString *replacement = [NSString stringWithFormat:@"<img src=%@>", base64];
     
-    NSString *new = [markdown stringByReplacingCharactersInRange:match.range withString:replacement];
-    return new;
+    return [originalString stringByReplacingCharactersInRange:match.range withString:replacement];
+    
 }
 
 - (NSString *)replaceImagesWithBase64 : (NSString *)markdown{
