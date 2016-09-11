@@ -85,7 +85,7 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
 }
 
 - (void)uploadImage : (UIImage *)image
-              order : (int)order{
+              order : (int)order {
     NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64DataForImage:image];
     NSDictionary *parameters = @{@"image" : base64,
                                  @"order" : @(order)};

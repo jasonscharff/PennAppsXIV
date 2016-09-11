@@ -88,7 +88,7 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
         NSArray *instances = [regex matchesInString:markdown
                                             options:NSMatchingReportProgress
                                               range:NSMakeRange(0, markdown.length)];
-        NSMutableString *mutableMarkdown = [[NSMutableString alloc]initWithString:markdown];
+        NSString *newMarkdown = [[NSMutableString alloc]initWithString:markdown];
         
         for (int i = 0; i < instances.count; i++) {
             NSTextCheckingResult *match = instances[i];
@@ -99,10 +99,10 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
             
             NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64ForImageName:path];
             NSString *newString = [originalString stringByReplacingOccurrencesOfString:path withString:base64];
-            [mutableMarkdown stringByReplacingOccurrencesOfString:originalString withString:newString];
+            newMarkdown = [newMarkdown stringByReplacingOccurrencesOfString:originalString withString:newString];
         }
         
-        return [NSString stringWithString:mutableMarkdown];
+        return [NSString stringWithString:newMarkdown];
     }
 }
 
@@ -124,7 +124,7 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
     
     for (int i =0; i<instances.count; i++) {
         NSTextCheckingResult *match = instances[i];
-        NSString *replacement = [NSString stringWithFormat:@"<button class=\"nte-upload-button\" onclick=\"location.href = \"%@_%i\";", kNTEUploadActionPrefix, i];
+        NSString *replacement = [NSString stringWithFormat:@"<a href=\"%@_%i\" class=\"nte-upload-button\">Upload Image</a>", kNTEUploadActionPrefix, i];
         NSString *originalString = [markdown substringWithRange:match.range];
         NSRange offsetRange = NSMakeRange(match.range.location-rangeOffset, match.range.length);
         rangeOffset += (originalString.length - replacement.length);

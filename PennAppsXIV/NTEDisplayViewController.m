@@ -11,16 +11,16 @@
 #import "AutolayoutHelper.h"
 
 #import "NTENote.h"
-
-
-//Remove
 #import "NTEMarkdownRenderController.h"
+#import "NTESocketManager.h"
 
 @import WebKit;
 
-@interface NTEDisplayViewController () <WKNavigationDelegate>
+@interface NTEDisplayViewController () <WKNavigationDelegate, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>
     
 @property (nonatomic) WKWebView *webView;
+@property (nonatomic) int order;
 
 @end
 
@@ -68,12 +68,59 @@
 decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction
 decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
-    NSString *url = navigationAction.request.URL.absoluteString;
-    if([url hasPrefix:kNTEUploadActionPrefix]) {
-        //show the image picker.
+    if([navigationAction.request.URL.absoluteString isEqualToString:@"about:blank"]) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    } else {
+        NSString *url = navigationAction.request.URL.absoluteString;
+        if([url hasPrefix:kNTEUploadActionPrefix]) {
+            NSRange rangeOfUnderscore = [url rangeOfString:@"_"];
+            NSString *substring = [url substringFromIndex:rangeOfUnderscore.location+rangeOfUnderscore.length+1];
+            self.order = substring.intValue;
+            UIAlertController *imageTypeChooser = [UIAlertController alertControllerWithTitle:nil
+                                                                                      message:nil
+                                                                               preferredStyle:UIAlertControllerStyleActionSheet];
+            
+            UIAlertAction *library = [UIAlertAction actionWithTitle:@"Photo Library" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+                picker.delegate = self;
+                picker.allowsEditing = YES;
+                picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+                [self presentViewController:picker animated:YES completion:nil];
+            }];
+            
+            UIAlertAction *camera = [UIAlertAction actionWithTitle:@"Camera" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+                picker.delegate = self;
+                picker.allowsEditing = YES;
+                picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                [self presentViewController:picker animated:YES completion:nil];
+            }];
+            
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+            
+            [imageTypeChooser addAction:camera];
+            [imageTypeChooser addAction:library];
+            [imageTypeChooser addAction:cancel];
+            
+            [self presentViewController:imageTypeChooser animated:YES completion:nil];
+            
+            
+        }
+        decisionHandler(WKNavigationActionPolicyCancel);
     }
-    
-    decisionHandler(WKNavigationActionPolicyCancel);
+}
+
+#pragma mark UIImagePickerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+    didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    //Show some sort of crop view controller.
+    [[NTESocketManager sharedSocket]uploadImage:image order:self.order];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 

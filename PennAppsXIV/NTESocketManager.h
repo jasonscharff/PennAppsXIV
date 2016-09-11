@@ -8,11 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class UIImage;
+
 @interface NTESocketManager : NSObject
 
 + (instancetype)sharedSocket;
 
+- (void)uploadImage : (UIImage *)image
+              order : (int)order;
+
 @property (nonatomic, strong) NSURL *baseURL;
+
 
 
 @end
