@@ -20,6 +20,7 @@
 		BED426AC1D84BC1F0092C711 /* Andrew.md in Sources */ = {isa = PBXBuildFile; fileRef = BED426AB1D84BC1F0092C711 /* Andrew.md */; };
 		BED426AD1D84BDD20092C711 /* Andrew.md in Resources */ = {isa = PBXBuildFile; fileRef = BED426AB1D84BC1F0092C711 /* Andrew.md */; };
 		BED426B01D84E7390092C711 /* NTESocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BED426AF1D84E7390092C711 /* NTESocketManager.m */; };
+		BED426B31D84EA140092C711 /* NTEQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED426B21D84EA140092C711 /* NTEQRCodeScannerViewController.m */; };
 		CCA82B43D63C674FD53D5AF6 /* Pods_PennAppsXIV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3169F9DB5904EEC8C9F958 /* Pods_PennAppsXIV.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,8 @@
 		BED426AB1D84BC1F0092C711 /* Andrew.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Andrew.md; sourceTree = "<group>"; };
 		BED426AE1D84E7390092C711 /* NTESocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESocketManager.h; sourceTree = "<group>"; };
 		BED426AF1D84E7390092C711 /* NTESocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESocketManager.m; sourceTree = "<group>"; };
+		BED426B11D84EA140092C711 /* NTEQRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTEQRCodeScannerViewController.h; sourceTree = "<group>"; };
+		BED426B21D84EA140092C711 /* NTEQRCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTEQRCodeScannerViewController.m; sourceTree = "<group>"; };
 		D7BB5CCB5EDBFD3E53CDEA6C /* Pods-PennAppsXIV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PennAppsXIV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PennAppsXIV/Pods-PennAppsXIV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +85,8 @@
 		BE27A8DD1D849BEB0094D1F2 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BED426B11D84EA140092C711 /* NTEQRCodeScannerViewController.h */,
+				BED426B21D84EA140092C711 /* NTEQRCodeScannerViewController.m */,
 				BE27A8DA1D849BE50094D1F2 /* NTEDisplayViewController.h */,
 				BE27A8DB1D849BE50094D1F2 /* NTEDisplayViewController.m */,
 			);
@@ -289,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED426B31D84EA140092C711 /* NTEQRCodeScannerViewController.m in Sources */,
 				BE27A8E81D84A0540094D1F2 /* AutolayoutHelper.m in Sources */,
 				BED426B01D84E7390092C711 /* NTESocketManager.m in Sources */,
 				BED426AC1D84BC1F0092C711 /* Andrew.md in Sources */,

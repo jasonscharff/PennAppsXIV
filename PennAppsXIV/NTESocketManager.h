@@ -10,6 +10,8 @@
 
 @interface NTESocketManager : NSObject
 
++ (instancetype)sharedSocket;
+
 @property (nonatomic, strong) NSURL *baseURL;
 
 @end

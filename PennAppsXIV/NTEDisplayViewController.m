@@ -26,6 +26,15 @@
 
 @implementation NTEDisplayViewController
 
++ (instancetype)sharedNTEDisplayViewController {
+    static dispatch_once_t onceToken;
+    static NTEDisplayViewController *_sharedInstance;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc]init];
+    });
+    return _sharedInstance;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];

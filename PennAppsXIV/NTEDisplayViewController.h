@@ -12,7 +12,7 @@
 
 @interface NTEDisplayViewController : UIViewController
 
++ (instancetype)sharedNTEDisplayViewController;
 @property (nonatomic) NTENote *note;
-    
     
 @end

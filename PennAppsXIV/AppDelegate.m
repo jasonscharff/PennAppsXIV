@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "NTEDisplayViewController.h"
+#import "NTEQRCodeScannerViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NTEDisplayViewController *rootVC = [[NTEDisplayViewController alloc]init];
+    NTEQRCodeScannerViewController *rootVC = [[NTEQRCodeScannerViewController alloc]init];
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

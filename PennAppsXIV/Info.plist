@@ -32,5 +32,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string>Notebook</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Notebook needs access to the camera in order to pair with Atom on your computer.</string>
 </dict>
 </plist>
