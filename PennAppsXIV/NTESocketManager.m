@@ -11,6 +11,7 @@
 #import "NTEDisplayViewController.h"
 #import "NTENote.h"
 #import "NTEImageStoreController.h"
+#import "NTEMarkdownRenderController.h"
 
 
 @import SocketIO;
@@ -90,6 +91,17 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
     NSDictionary *parameters = @{@"image" : base64,
                                  @"order" : @(order)};
     [self.socketIOClient emit:@"imageUpdate" with:@[parameters]];
+    
+    
+    NTENote *currentNote = [NTEDisplayViewController sharedNTEDisplayViewController].note;
+    
+    NSString *base64URI = [NSString stringWithFormat:@"data:%@;base64,%@", base64, @"image/jpeg"];
+    
+    currentNote.rawMarkdown = [[NTEMarkdownRenderController sharedRenderController]replaceButtonAtPosition:order
+                                                                                                 withImage:base64URI
+                                                                                               forMarkDown:currentNote.rawMarkdown];
+    [NTEDisplayViewController sharedNTEDisplayViewController].note = currentNote;
+    
 }
 
 @end

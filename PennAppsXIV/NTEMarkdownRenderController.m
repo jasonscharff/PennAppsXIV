@@ -76,6 +76,31 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
     return [self addMathematicalFormattingToMarkdown:inHTML withDictionary:replacements];
 }
 
+- (NSString *)replaceButtonAtPosition : (int)position
+                            withImage : (NSString *)base64
+                          forMarkDown : (NSString *)markdown {
+    NSError *error;
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"!\\[[\\s\\S]*?\\]!" options:NSRegularExpressionCaseInsensitive error:&error];
+    if(error) {
+        NSLog(@"error with regex %@", error.localizedDescription);
+        return markdown;
+    }
+    NSArray *instances = [regularExpression matchesInString:markdown
+                                                    options:NSMatchingReportProgress
+                                                      range:NSMakeRange(0, markdown.length)];
+    
+    NSTextCheckingResult *match = instances[position];
+    NSString *originalString = [markdown substringWithRange:match.range];
+    NSRange startRange = [originalString rangeOfString:@"!["];
+    NSRange endRange = [originalString rangeOfString:@"]"];
+    NSString *originalAltText = [originalString substringWithRange:NSMakeRange(startRange.location+startRange.length, endRange.location-startRange.location-startRange.length)];
+    
+    NSString *replacement = [NSString stringWithFormat:@"![%@](images/dfa.png)", originalAltText];
+    
+    return [markdown stringByReplacingCharactersInRange:match.range withString:replacement];
+    
+}
+
 - (NSString *)replaceImagesWithBase64 : (NSString *)markdown{
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"!\\[[^\\]]+\\]\\([^)]+\\)"
@@ -199,5 +224,6 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
     }
     
 }
+
 
 @end
