@@ -12,6 +12,8 @@
 
 @interface NTENote : NSObject
 
+- (instancetype)initWithDictonary : (NSDictionary *)dictionary;
+
 @property (nonatomic) NSString *rawMarkdown;
 @property (nonatomic) NSString *html;
     

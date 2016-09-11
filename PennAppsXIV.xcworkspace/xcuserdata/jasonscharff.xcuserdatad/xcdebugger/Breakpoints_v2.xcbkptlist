@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEDisplayViewController.m"
-            timestampString = "495250864.563135"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "-setNote:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495232648.690218"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14">
+            startingLineNumber = "15"
+            endingLineNumber = "15">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,7 +40,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495241172.677816"
+            timestampString = "495261940.642982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-generateHTMLFromMarkdown:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
+            timestampString = "495261940.642982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "-embedHTMLContentInTemplate:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -56,59 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495244870.068115"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-embedHTMLContentInTemplate:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495241172.677816"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-generateHTMLFromMarkdown:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PennAppsXIV/NTEDisplayViewController.m"
-            timestampString = "495250864.563135"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495233278.458523"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-initWithTemplateFilename:inBundle:"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEDisplayViewController.m"
-            timestampString = "495250864.563135"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-setNote:"
             landmarkType = "7">
          </BreakpointContent>
@@ -136,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495244870.068115"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "-embedHTMLContentInTemplate:"
             landmarkType = "7">
          </BreakpointContent>
@@ -162,11 +146,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495241351.132667"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "-generateHTMLFromMarkdown:"
             landmarkType = "7">
          </BreakpointContent>
@@ -178,11 +162,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEMarkdownRenderController.m"
-            timestampString = "495244870.068115"
+            timestampString = "495261940.642982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "-removeMathematicalFormattingFromMarkdown:"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,7 +174,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PennAppsXIV/NTEQRCodeScannerViewController.m"
@@ -200,6 +184,38 @@
             startingLineNumber = "58"
             endingLineNumber = "58"
             landmarkName = "-startReading"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PennAppsXIV/NTESocketManager.m"
+            timestampString = "495262229.900225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-configureSocket"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PennAppsXIV/NTESocketManager.m"
+            timestampString = "495262234.185374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-configureSocket"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

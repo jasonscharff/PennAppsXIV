@@ -13,6 +13,8 @@
 #import <MMMarkdown/MMMarkdown.h>
 #import <GRMustache/GRMustache.h>
 
+#import "NTEImageStoreController.h"
+
 @interface NTEMarkdownRenderController()
     
 @property (nonatomic, strong) GRMustacheTemplate *htmlTemplate;
@@ -21,6 +23,7 @@
 
 static NSString * const kNTEStandardHTMLTemplateFilename = @"html_template";
 static NSString * const kNTEContentFieldName = @"kNTEContent";
+NSString * const kNTEUploadActionPrefix = @"uploadImage";
 
 
 @implementation NTEMarkdownRenderController
@@ -55,6 +58,8 @@ static NSString * const kNTEContentFieldName = @"kNTEContent";
     //For now we'll do this.
     //Next step is to do some regex on it first.
     NSError *error;
+    markdown = [self replaceMissingImagesWithButtons:markdown];
+    markdown = [self replaceImagesWithBase64:markdown];
     NSDictionary *replacementsDictionary = [self removeMathematicalFormattingFromMarkdown:markdown];
     NSString *cleanedUpMarkDown = replacementsDictionary[@"markdown"];
     NSDictionary *replacements = replacementsDictionary[@"replacements"];
@@ -69,6 +74,63 @@ static NSString * const kNTEContentFieldName = @"kNTEContent";
     }
     NSString *inHTML = [self embedHTMLContentInTemplate:markdownAsHTML];
     return [self addMathematicalFormattingToMarkdown:inHTML withDictionary:replacements];
+}
+
+- (NSString *)replaceImagesWithBase64 : (NSString *)markdown{
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"!\\[[^\\]]+\\]\\([^)]+\\)"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    if(error) {
+        NSLog(@"error with regex = %@", error.localizedDescription);
+        return markdown;
+    } else {
+        NSArray *instances = [regex matchesInString:markdown
+                                            options:NSMatchingReportProgress
+                                              range:NSMakeRange(0, markdown.length)];
+        NSMutableString *mutableMarkdown = [[NSMutableString alloc]initWithString:markdown];
+        
+        for (int i = 0; i < instances.count; i++) {
+            NSTextCheckingResult *match = instances[i];
+            NSString *originalString = [markdown substringWithRange:match.range];
+            NSRange endRange = [originalString rangeOfString:@")["];
+            NSString *path = [originalString substringWithRange:NSMakeRange(endRange.location+endRange.length,
+                                                           originalString.length-endRange.location-endRange.length)];
+            
+            NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64ForImageName:path];
+            NSString *newString = [originalString stringByReplacingOccurrencesOfString:path withString:base64];
+            [mutableMarkdown stringByReplacingOccurrencesOfString:originalString withString:newString];
+        }
+        
+        return [NSString stringWithString:mutableMarkdown];
+    }
+}
+
+- (NSString *)replaceMissingImagesWithButtons : (NSString *)markdown {
+    NSError *error;
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"!\[([\\s\\S]*?)\\]!" options:NSRegularExpressionCaseInsensitive error:&error];
+    if(error) {
+        NSLog(@"error with regex %@", error.localizedDescription);
+        return markdown;
+    }
+    NSArray *instances = [regularExpression matchesInString:markdown
+                                               options:NSMatchingReportProgress
+                                                 range:NSMakeRange(0, markdown.length)];
+    
+    
+    int rangeOffset = 0;
+    
+    NSMutableString *mutableMarkdown = [[NSMutableString alloc]initWithString:markdown];
+    
+    for (int i =0; i<instances.count; i++) {
+        NSTextCheckingResult *match = instances[i];
+        NSString *replacement = [NSString stringWithFormat:@"<button class=\"nte-upload-button\" onclick=\"location.href = \"%@_%i\";", kNTEUploadActionPrefix, i];
+        NSString *originalString = [markdown substringWithRange:match.range];
+        NSRange offsetRange = NSMakeRange(match.range.location-rangeOffset, match.range.length);
+        rangeOffset += (originalString.length - replacement.length);
+        [mutableMarkdown replaceCharactersInRange:offsetRange withString:replacement];
+    }
+    return [NSString stringWithString:mutableMarkdown];
 }
 
 - (NSString *)addMathematicalFormattingToMarkdown : (NSString *)markdown withDictionary : (NSDictionary *)replacements {
@@ -137,8 +199,5 @@ static NSString * const kNTEContentFieldName = @"kNTEContent";
     }
     
 }
-    
-
-
 
 @end

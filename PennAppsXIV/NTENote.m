@@ -9,6 +9,7 @@
 #import "NTENote.h"
 
 #import "NTEMarkdownRenderController.h"
+#import "NTEImageStoreController.h"
 
 @implementation NTENote
     
@@ -22,6 +23,10 @@
     
 - (void)setupWithDictionary : (NSDictionary *)dictionary {
     self.rawMarkdown = dictionary[@"markdown"];
+    NSArray *images = dictionary[@"images"];
+    for (NSDictionary *image in images) {
+        [[NTEImageStoreController sharedImageStoreController]addImageFromDictionary:image];
+    }
     self.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:self.rawMarkdown];
 }
     

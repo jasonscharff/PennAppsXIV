@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kNTEUploadActionPrefix;
+
 @interface NTEMarkdownRenderController : NSObject
 
 + (instancetype)sharedRenderController;

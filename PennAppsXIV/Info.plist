@@ -36,5 +36,10 @@
 	<string>Notebook</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Notebook needs access to the camera in order to pair with Atom on your computer.</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

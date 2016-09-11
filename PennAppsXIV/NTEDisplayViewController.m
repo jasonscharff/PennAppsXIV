@@ -45,20 +45,6 @@
     if(self.note) {
         [self setNote:_note];
     }
-    //Temporary
-    NTENote *note = [[NTENote alloc]init];
-    NSString *txtFilePath = [[NSBundle mainBundle] pathForResource:@"Andrew" ofType:@"md"];
-    NSError *error;
-    NSString *rawMarkDown = [NSString stringWithContentsOfFile:txtFilePath encoding:NSUTF8StringEncoding error:&error];
-    if(error) {
-        NSLog(@"error.localized description = %@", error.localizedDescription);
-    }
-    note.rawMarkdown = rawMarkDown;
-    
-    note.html = [[NTEMarkdownRenderController sharedRenderController]generateHTMLFromMarkdown:note.rawMarkdown];
-    
-    self.note = note;
-    
     // Do any additional setup after loading the view.
 }
     
@@ -71,8 +57,6 @@
 - (void)setNote:(NTENote *)note {
     _note = note;
     if(self.viewLoaded) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDir = [paths objectAtIndex:0];
         if(note.html) {
             [self.webView loadHTMLString:note.html baseURL:nil];
         }
@@ -80,6 +64,17 @@
     }
 }
 
+- (void)webView:(WKWebView *)webView
+decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction
+decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    
+    NSString *url = navigationAction.request.URL.absoluteString;
+    if([url hasPrefix:kNTEUploadActionPrefix]) {
+        //show the image picker.
+    }
+    
+    decisionHandler(WKNavigationActionPolicyCancel);
+}
 
 
 @end

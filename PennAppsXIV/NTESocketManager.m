@@ -8,6 +8,11 @@
 
 #import "NTESocketManager.h"
 
+#import "NTEDisplayViewController.h"
+#import "NTENote.h"
+#import "NTEImageStoreController.h"
+
+
 @import SocketIO;
 
 @interface NTESocketManager()
@@ -15,6 +20,8 @@
 @property (nonatomic, strong) SocketIOClient *socketIOClient;
 
 @end
+
+NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
 
 @implementation NTESocketManager
 
@@ -34,7 +41,10 @@
 }
 
 - (void)configureSocket {
-    if(self.socketIOClient) {
+    if(self.socketIOClient &&
+       (self.socketIOClient.status == SocketIOClientStatusConnected ||
+       self.socketIOClient.status == SocketIOClientStatusConnecting)) {
+        
         [self.socketIOClient disconnect];
     }
     NSDictionary *options = @{@"secure" : @NO,
@@ -43,15 +53,31 @@
     self.socketIOClient = [[SocketIOClient alloc]initWithSocketURL:_baseURL config:options];
     
     [self.socketIOClient on:@"connect" callback:^(NSArray* data, SocketAckEmitter* ack) {
-        NSLog(@"connect data = %@", data);
+        NSLog(@"data onc = %@", data);
+        NSDictionary *dictionary = data[0];
+        NTENote *note = [[NTENote alloc]initWithDictonary:dictionary];
+        [NTEDisplayViewController sharedNTEDisplayViewController].note = note;
     }];
     
-    [self.socketIOClient on:@"diff" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
+    [self.socketIOClient on:@"data" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
+        NSLog(@"data update = %@", data);
+    }];
+    
+    [self.socketIOClient on:@"disconnect" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
+       //Go back to the qr code manager.
         
     }];
     
+    [self.socketIOClient connect];
     
-    
+}
+
+- (void)uploadImage : (UIImage *)image
+              order : (int)order{
+    NSString *base64 = [[NTEImageStoreController sharedImageStoreController]base64DataForImage:image];
+    NSDictionary *parameters = @{@"image" : base64,
+                                 @"order" : @(order)};
+    [self.socketIOClient emit:@"imageUpdate" with:@[parameters]];
 }
 
 @end
