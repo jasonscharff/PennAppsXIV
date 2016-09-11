@@ -24,6 +24,7 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = navigationController;
+    navigationController.navigationBar.translucent = NO;
     [self.window makeKeyAndVisible];
     
     return YES;
