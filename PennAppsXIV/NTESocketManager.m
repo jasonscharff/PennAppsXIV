@@ -74,7 +74,6 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
         }];
         
         [self.socketIOClient on:@"data" callback:^(NSArray * _Nonnull data, SocketAckEmitter * _Nonnull ack) {
-            NSLog(@"data update = %@", data);
             if(data.count > 0) {
                 NSDictionary *dictionary = data[0];
                 [[NTENote sharedNote]setupWithDictionary:dictionary];

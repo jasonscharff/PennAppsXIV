@@ -121,8 +121,6 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
                                                                                         error:&error];
             NSTextCheckingResult *srcResult = [srcRegex firstMatchInString:original options:NSMatchingReportProgress range:NSMakeRange(0, original.length)];
             NSString *src = [original substringWithRange:srcResult.range];
-            
-    
             NSString *start = @"src=\"";
             NSString *imageName = [src substringWithRange:NSMakeRange(start.length, src.length-start.length-1)];
             if(![imageName hasPrefix:@"data"]) {
