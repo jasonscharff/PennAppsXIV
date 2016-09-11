@@ -93,7 +93,7 @@ NSString * const kNTEDidLoseSocketConnection = @"com.nte.socket.lost";
                                      @"order" : @(order)};
         [self.socketIOClient emit:@"imageUpdate" with:@[parameters]];
         
-        NSString *base64URI = [NSString stringWithFormat:@"data:%@;base64,%@", base64, @"image/jpeg"];
+        NSString *base64URI = [NSString stringWithFormat:@"data:%@;base64,%@", @"image/jpeg", base64];
         
         [NTENote sharedNote].html = [[NTEMarkdownRenderController sharedRenderController]replaceButtonAtPosition:order withImage:base64URI forHTML:[NTENote sharedNote].html];
         

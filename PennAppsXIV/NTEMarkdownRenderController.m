@@ -96,7 +96,7 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
     
     NSString *replacement = [NSString stringWithFormat:@"<img src=%@>", base64];
     
-    return [originalString stringByReplacingCharactersInRange:match.range withString:replacement];
+    return [html stringByReplacingCharactersInRange:match.range withString:replacement];
     
 }
 
