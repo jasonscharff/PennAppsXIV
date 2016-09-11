@@ -92,7 +92,6 @@ NSString * const kNTEUploadActionPrefix = @"uploadImage";
                                                       range:NSMakeRange(0, html.length)];
     
     NSTextCheckingResult *match = instances[position];
-    NSString *originalString = [html substringWithRange:match.range];
     
     NSString *replacement = [NSString stringWithFormat:@"<img src=%@>", base64];
     
