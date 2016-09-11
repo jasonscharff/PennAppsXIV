@@ -79,9 +79,27 @@ static NSString * const kNTEContentFieldName = @"kNTEContent";
 }
 
 - (NSDictionary *)removeMathematicalFormattingFromMarkdown : (NSString *)markdown {
+    NSDictionary *outline = [self removeRegex:@"\\$\\$([\\s\\S]*?)\\$\\$" fromMarkdown:markdown withIdOffset:0];
+    NSDictionary *firstLevelDictionary = outline[@"replacements"];
+    NSString *firstTierMarkdown = outline[@"markdown"];
+    NSDictionary *inlineMath = [self removeRegex:@"\\$([\\s\\S]*?)\\$" fromMarkdown:firstTierMarkdown withIdOffset:(int)firstLevelDictionary.count];
+    NSDictionary *secondLevelDictionary = inlineMath[@"replacements"];
+    NSMutableDictionary *combinedReplacements = [NSMutableDictionary dictionary];
+    NSString *finalMarkdown = inlineMath[@"markdown"];
+    [combinedReplacements addEntriesFromDictionary:firstLevelDictionary];
+    [combinedReplacements addEntriesFromDictionary:secondLevelDictionary];
+    return @{@"replacements" : combinedReplacements,
+             @"markdown" : finalMarkdown};
+    
+}
+
+
+- (NSDictionary *)removeRegex: (NSString *)pattern
+                fromMarkdown : (NSString *)markdown
+                withIdOffset : (int)idOffset {
     NSMutableString *mutableMarkdown = [[NSMutableString alloc]initWithString:markdown];
     NSError *error;
-    NSRegularExpression *regularRegex = [NSRegularExpression regularExpressionWithPattern:@"\\$\\$([\\s\\S]*?)\\$\\$" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSRegularExpression *regularRegex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *instances = [regularRegex matchesInString:markdown
                                                options:NSMatchingReportProgress
                                                  range:NSMakeRange(0, markdown.length)];
@@ -92,7 +110,7 @@ static NSString * const kNTEContentFieldName = @"kNTEContent";
     
     for (int i =0; i<instances.count; i++) {
         NSTextCheckingResult *match = instances[i];
-        NSString *replacement = [NSString stringWithFormat:@"<div class=\"notebook-replacement\" id=replacement-%i></div>", i];
+        NSString *replacement = [NSString stringWithFormat:@"<div class=\"notebook-replacement\" id=replacement-%i></div>", i+idOffset];
         NSString *originalString = [markdown substringWithRange:match.range];
         replacements[replacement] = originalString;
         NSRange offsetRange = NSMakeRange(match.range.location-rangeOffset, match.range.length);
@@ -105,6 +123,7 @@ static NSString * const kNTEContentFieldName = @"kNTEContent";
                                  @"markdown" : mutableMarkdown};
     return returnDict;
 }
+
 
 - (NSString *)embedHTMLContentInTemplate : (NSString *)content {
     NSDictionary *parameters = @{kNTEContentFieldName : content};
